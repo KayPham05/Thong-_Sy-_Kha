@@ -1,0 +1,166 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+header {
+    display: flex;
+    
+    padding: 20px;
+    background-color: #fff;
+}
+
+.logo img {
+    height: 50px;
+    margin-bottom: 50px;
+    margin-left: 200px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Khoảng cách giữa các mục trong menu */
+    margin-left: 0; /* Xóa khoảng cách thừa bên trái của menu */
+}
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Căn chỉnh thanh tìm kiếm */
+.search-container {
+    margin-left: 200px;
+}
+
+.search-container form {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"] {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+    padding-right: 40px; /* Dành không gian cho biểu tượng kính lúp */
+}
+.search-container input[type="text"]:focus {
+    outline: none; /* Không có viền đậm khi nhấp vào ô tìm kiếm */
+}
+
+.search-container button {
+    position: relative;
+    left: -35px; /*Vi tri Đặt biểu tượng kính lúp vào trong ô tìm kiếm */
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Thêm style cho Font Awesome hoặc dùng icon tương tự */
+.fa-search {
+    font-family: FontAwesome;
+}
+
+.search-container input[type="text"]::placeholder {
+    color: #888;
+}
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu > li {
+    position: relative; /* Để menu con có thể sử dụng vị trí tuyệt đối */
+    margin-right: 20px; /* Khoảng cách giữa các mục menu */
+}
+
+.menu a {
+    text-decoration: none;
+    padding: 10px;
+    color: #333; /* Màu chữ */
+}
+
+.submenu {
+    display: none; /* Ẩn menu con mặc định */
+    position: absolute; /* Để hiển thị ở vị trí chính xác */
+    top: 100%; /* Hiển thị bên dưới menu chính */
+    left: 0;
+    background-color: #fff; /* Màu nền của menu con */
+    border: 1px solid #ccc; /* Viền của menu con */
+    z-index: 1000; /* Để menu con nằm trên các phần tử khác */
+    list-style: none;
+    padding: 0;
+}
+
+.submenu li a {
+    display: block; /* Chiếm toàn bộ chiều rộng */
+    padding: 10px;
+    color: #888; /* Màu chữ cho menu con */
+}
+
+.menu > li:hover .submenu {
+    display: block; /* Hiện menu con khi hover vào menu chính */
+}
+/* 
+.promotion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5e1f4;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.promo-text {
+    color: #333;
+}
+
+.promo-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.promo-text p {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.promo-text h1 {
+    font-size: 48px;
+    color: #e62e64;
+    margin-bottom: 20px;
+}
+
+.promo-text span {
+    color: #e62e64;
+    font-weight: bold;
+}
+
+.promo-text button {
+    background-color: #e62e64;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.promo-image img {
+    height: 100px;
+}
+
+footer {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+    margin-top: 20px;
+} */
