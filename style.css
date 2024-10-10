@@ -6,7 +6,6 @@ body {
 
 header {
     display: flex;
-    
     padding: 20px;
     background-color: #fff;
 }
@@ -107,6 +106,27 @@ nav ul li a {
 
 .menu > li:hover .submenu {
     display: block; /* Hiện menu con khi hover vào menu chính */
+}
+.slide-show{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+.list-images{
+    display: flex;
+    transition: 0.5;
+    img{
+        width: 100%;
+    }
+}
+.btn{
+    font-size: 70px;
+    color : gray;
+    position :absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
 }
 /* 
 .promotion {
