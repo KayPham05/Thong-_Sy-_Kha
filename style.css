@@ -327,3 +327,56 @@ nav ul li a {
         margin-bottom: 20px;
     }
 }
+/* phan duoi*/
+footer {
+    background-color: #000000;
+    color: #888;
+    padding-top: 23px;
+    padding-left: 40px;
+    padding-bottom: 30px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer h5 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #888;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer li {
+    margin-bottom: 8px;
+}
+
+footer a {
+    color: #888;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .vechungtoi, 
+footer .dichvunoibat, 
+footer .cskh, 
+footer .ketnoi {
+    width: 22%; 
+}
+
+footer .cskh p {
+    margin: 5px 0;
+}
+
+footer .ketnoi {
+    text-align: center;
+}
