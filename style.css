@@ -196,6 +196,7 @@ nav ul li a {
     display: flex;
     transition: transform 0.5s ease;
 }
+<<<<<<< HEAD
 
 .list-images img {
     width: 100%;
@@ -208,6 +209,65 @@ nav ul li a {
     top: 50%;
     transform: translateY(-50%);
     background: none;
+=======
+.btn{
+    font-size: 70px;    
+    color :rgb(121, 114, 114);
+    position :absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5;
+    cursor: pointer;
+}
+.btn:hover{
+    color: black;
+}
+.btn-left{
+    left: 20%;
+}
+.btn-right{
+    right: 20%;
+}
+/* 
+.promotion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5e1f4;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.promo-text {
+    color: #333;
+}
+
+.promo-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.promo-text p {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.promo-text h1 {
+    font-size: 48px;
+    color: #e62e64;
+    margin-bottom: 20px;
+}
+
+.promo-text span {
+    color: #e62e64;
+    font-weight: bold;
+}
+
+.promo-text button {
+    background-color: #e62e64;
+    color: white;
+>>>>>>> d3112f7c1138388111ffdebb8d70fcc99c95f497
     border: none;
     cursor: pointer;
     z-index: 10;
