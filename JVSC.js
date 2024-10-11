@@ -39,3 +39,4 @@ let refreshSlide = setInterval(() => {
 
 // Initial call to set the slider position
 reloadSlider();
+// thong làm
