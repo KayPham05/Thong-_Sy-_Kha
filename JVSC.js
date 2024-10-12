@@ -10,6 +10,8 @@ const length = imgs.length; // Total number of images
 function reloadSlider() {
     let width = imgs[0].offsetWidth; // Width of each image
     listImage.style.transform = `translateX(${-width * current}px)`; // Move the slider
+    // document.querySelector('.active1').classList.remove('active1');
+    // document.querySelector('.index-item-'+current).classList.add('active1')
 }
 
 // Next button click event
@@ -20,6 +22,8 @@ btnRight.onclick = function () {
         current++;
     }
     reloadSlider();
+    document.querySelector('.active1').classList.remove('active1');
+    document.querySelector('.index-item-'+current).classList.add('active1');
 }
 
 // Previous button click event
@@ -30,12 +34,14 @@ btnLeft.onclick = function () {
         current--;
     }
     reloadSlider();
+    document.querySelector('.active1').classList.remove('active1');
+    document.querySelector('.index-item-'+current).classList.add('active1');
 }
 
 // Automatic sliding every 4 seconds
-let refreshSlide = setInterval(() => {
-    btnRight.click(); // Simulate the "next" button being clicked
-}, 4000);
+// let refreshSlide = setInterval(() => {
+//     btnRight.click(); // Simulate the "next" button being clicked
+// }, 4000);
 
 // Initial call to set the slider position
 reloadSlider();
