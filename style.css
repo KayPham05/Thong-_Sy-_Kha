@@ -327,3 +327,120 @@ nav ul li a {
         margin-bottom: 20px;
     }
 }
+/* phan duoi*/
+
+footer {
+    background-color: #171717;
+    color: #8b8b8b;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.footer-container {
+    display: flex;
+    margin-right: 10px;
+    margin: 0 auto;
+    margin-left: 150px;
+    margin-bottom: 20px;
+}
+.footer-container h5 {
+    color: #d9d7d7;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+.footer-container ul li {
+    
+    list-style: none;
+    padding: 0;
+    padding-bottom: 15px;
+    text-align: left;
+    max-width: 250px;
+
+}
+a{
+    color: #8b8b8b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+footer .cskh a {
+    color: #d4d6d4;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+footer a:hover{
+    color: white;
+}
+
+.ketnoi img {
+    width: 50px;
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+.dichvunoibat li img{
+   width: 30px;
+   height: auto;
+}
+.dichvunoibat{
+    justify-content: center;
+    margin-right: 90px;
+}
+.footer-bottom {
+    display: flex;
+    background-color: #262626;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.footer-bottom .chucuoi{
+    margin-left: 10px;
+}
+footer h5 {
+    margin-left: 20px;
+}
+.ketnoi a{
+    padding-left: 20px;
+}
+footer ul {
+    padding-left: 20px;
+}
+footer p{
+    padding-left: 20px;
+}
+.cskh {
+max-width: 450px;
+margin-right: 50px;
+}
+.cskh p button {
+    position: relative;
+    background-color: #000000;
+    color: #ddd;
+    border: 1px solid #ddd;
+    max-width: 220px;
+    text-align: left;
+    align-items: center; 
+    display: flex;
+    z-index: 10;
+}
+.qr-download-container {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa cả nhóm QR và các nút */
+    gap: 20px; /* Khoảng cách giữa QR code và phần tải ứng dụng */
+}
+
+.qr-code {
+    margin-left: 200px;
+    width: 200px; /* Kích thước QR code */
+    height: auto; /* Giữ nguyên tỷ lệ */
+}
+
+.app-downloads {
+    display: flex;
+    flex-direction: column; /* Đặt các nút tải ứng dụng thành một cột */
+    gap: 10px; /* Khoảng cách giữa hai nút */
+}
+
+.qr-download-container {
+    width: 100px; /* Đặt kích thước của các nút tải */
+    height: auto;
+}
