@@ -42,3 +42,16 @@ btnLeft.onclick = function () {
 // Initial call to set the slider position
 reloadSlider();
 // thong làm
+//=====cua sy=========
+function showContent(contentId) {
+    // Ẩn tất cả các nội dung
+    var contents = document.getElementsByClassName('content');
+    for (var i = 0; i < contents.length; i++) {
+        contents[i].classList.remove('active');
+    }
+
+    // Hiển thị nội dung tương ứng với nút đã bấm
+    var contentToShow = document.getElementById(contentId);
+    contentToShow.classList.add('active');
+}
+
