@@ -343,6 +343,56 @@ nav ul li a {
     }
 }
 /* phan duoi*/
+.chon {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: white;
+    color: #d42a87;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nut h4 {
+    font-size: 20px;
+}
+
+.nut {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Đưa các nút vào giữa */
+    margin-bottom: 20px;
+}
+
+.nut button {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+.cc {
+    color: #000000;
+    
+}
+
+.content {
+    display: none; /* Mặc định ẩn */
+    flex-direction: row; /* Căn chỉnh theo hàng ngang */
+}
+
+.content ul {
+    margin-left: 0  ;
+    flex: 1;
+    padding-right: 20px; /* Khoảng cách giữa văn bản và hình ảnh */
+}
+
+
+.content.active {
+    display: flex; /* Hiển thị nội dung khi nút được bấm */
+}
 
 footer {
     background-color: #171717;
