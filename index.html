@@ -98,7 +98,7 @@
                 <div class="index-item1 index-item-3"></div>
             </div>
         </div>
-        <script src="JVSC.js"></script>
+        <script src="listImages.js"></script>
         <div class="container">
             <div class="header">
                 <h1>Tiện ích và dịch vụ</h1>
@@ -185,6 +185,140 @@
         <p>Cùng lập Quỹ Nhóm với MoMo để thực hiện các mục tiêu tài chính chung với bạn bè và gia đình.</p>
     </div>
 
+    <div class="featured">
+        <h2>Có gì mới trên MoMo?</h2>
+    </div>
+    <div class="containerNMM">
+        <div class="menuNew">
+          <ul>
+            <li class="active" data-tab="moinhat">Mới nhất</li>
+            <li data-tab="khuyenmai">Khuyến mãi</li>
+            <li data-tab="thongbao">Thông báo</li>
+            <li data-tab="sukien">Sự kiện</li>
+            <li data-tab="thongcao">Thông cáo</li>
+          </ul>
+        </div>
+<!-- làm thẻ và popup -->
+        <div class="cards-container">
+            <div class="promo-card">
+                <div class="promo-card-header">
+                    <img src="flight-momo.png" alt="MoMo Travel" class="promo-card-image">
+                </div>
+                <div class="promo-card-body">
+                    <h4 class="promo-card-title">Đặt vé máy bay Nhận thẻ quà thanh toán Điện - Nước</h4>
+                    <p class="promo-card-description">Đặt vé máy bay trên MoMo Travel, nhận ngay thẻ quà thanh toán điện/nước 10.000Đ</p>
+                </div>
+                <div class="promo-card-footer">
+                    <span class="promo-label">KHUYẾN MÃI</span>
+                    <span class="promo-time">• hôm qua</span>
+                </div>
+            </div>
+            <!-- Popup Modal Ve May Bay -->
+            <div id="promoPopup1" class="popup-modal">
+                <div class="popup-content">
+                    <span class="close-btn">&times;</span>
+                    <div class="popup-header">
+                        <img src="flight-momo.png" alt="MoMo Travel Promo" class="popup-image">
+                    </div>
+                    <div class="popup-body">
+                        <h2>Đặt vé máy bay Nhận thẻ quà thanh toán Điện - Nước</h2>
+                        <p>Đặt vé máy bay trên MoMo Travel, nhận ngay thẻ quà thanh toán điện/nước 10.000Đ</p>
+                        <p><strong>Khuyến mãi:</strong> Từ 11/10/2024 đến 31/12/2024</p>
+                        <p>Deal 10 điểm không có nhưng. Săn ưu đãi ngay trên MoMo Travel!</p>
+                        <button class="action-btn">Đổi quà du lịch</button>
+                        <button class="action-btn">Đặt vé bay</button>
+                    </div>
+                </div>
+            </div>               
+            <!-- Thêm các thẻ khác theo mẫu tương tự -->
+            <div id="popupOverlay" class="popup-overlay"></div>
+            <div class="promo-card">
+                <div class="promo-card-header">
+                    <img src="app-store.png" alt="App Store" class="promo-card-image">
+                </div>
+                <div class="promo-card-body">
+                    <h4 class="promo-card-title">Khám phá Zenless Zone Zero 1.2: Hành trình mới đầy kịch tính</h4>
+                    <p class="promo-card-description">Tham gia ngay để khám phá nhiều tính năng mới và những món quà hấp dẫn!</p>
+                </div>
+                <div class="promo-card-footer">
+                    <span class="promo-label">THÔNG BÁO</span>
+                    <span class="promo-time">• hôm qua</span>
+                </div>
+            </div>
+            <!-- Popup Modal Game ZZZ -->
+            <div id="promoPopup2" class="popup-modal">
+                <div class="popup-content">
+                    <span class="close-btn">&times;</span>
+                    <div class="popup-header">
+                        <img src="flight-momo.png" alt="MoMo Travel Promo" class="popup-image">
+                    </div>
+                    <div class="popup-body">
+                        <h2>Khám phá Zenless Zone Zero 1.2: Hành trình mới đầy kịch tính</h2>
+                        <p>Phiên bản 1.2 "Tour de Inferno" - Đường đua lửa ngục của Zenless Zone Zero mở ra cốt truyện hấp dẫn cùng những cải tiến về lối chơi, nâng trải nghiệm của bạn lên một tầm cao mới. Thanh toán App Store dễ dàng với MoMo, giảm ngay 40.000đ!</p>
+                        <p><strong>Khuyến mãi:</strong> Từ 11/10/2024 đến 31/12/2024</p>
+                        <p>Deal 10 điểm không có nhưng. Săn ưu đãi ngay trên MoMo Travel!</p>
+                        <button class="action-btn">THANH TOÁN NGAY</button>
+                        <button class="action-btn">LIÊN KẾT NGAY</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Thêm tiếp các thẻ khác -->
+            <div class="promo-card">
+                <div class="promo-card-header">
+                    <img src="app-store.png" alt="App Store" class="promo-card-image">
+                </div>
+                <div class="promo-card-body">
+                    <h4 class="promo-card-title">Khám phá Zenless Zone Zero 1.2: Hành trình mới đầy kịch tính</h4>
+                    <p class="promo-card-description">Tham gia ngay để khám phá nhiều tính năng mới và những món quà hấp dẫn!</p>
+                </div>
+                <div class="promo-card-footer">
+                    <span class="promo-label">THÔNG BÁO</span>
+                    <span class="promo-time">• hôm qua</span>
+                </div>
+            </div>
+            <div class="promo-card">
+                <div class="promo-card-header">
+                    <img src="app-store.png" alt="App Store" class="promo-card-image">
+                </div>
+                <div class="promo-card-body">
+                    <h4 class="promo-card-title">Khám phá Zenless Zone Zero 1.2: Hành trình mới đầy kịch tính</h4>
+                    <p class="promo-card-description">Tham gia ngay để khám phá nhiều tính năng mới và những món quà hấp dẫn!</p>
+                </div>
+                <div class="promo-card-footer">
+                    <span class="promo-label">THÔNG BÁO</span>
+                    <span class="promo-time">• hôm qua</span>
+                </div>
+            </div>
+            <div class="promo-card">
+                <div class="promo-card-header">
+                    <img src="app-store.png" alt="App Store" class="promo-card-image">
+                </div>
+                <div class="promo-card-body">
+                    <h4 class="promo-card-title">Khám phá Zenless Zone Zero 1.2: Hành trình mới đầy kịch tính</h4>
+                    <p class="promo-card-description">Tham gia ngay để khám phá nhiều tính năng mới và những món quà hấp dẫn!</p>
+                </div>
+                <div class="promo-card-footer">
+                    <span class="promo-label">THÔNG BÁO</span>
+                    <span class="promo-time">• hôm qua</span>
+                </div>
+            </div>
+            <div class="promo-card">
+                <div class="promo-card-header">
+                    <img src="app-store.png" alt="App Store" class="promo-card-image">
+                </div>
+                <div class="promo-card-body">
+                    <h4 class="promo-card-title">Khám phá Zenless Zone Zero 1.2: Hành trình mới đầy kịch tính</h4>
+                    <p class="promo-card-description">Tham gia ngay để khám phá nhiều tính năng mới và những món quà hấp dẫn!</p>
+                </div>
+                <div class="promo-card-footer">
+                    <span class="promo-label">THÔNG BÁO</span>
+                    <span class="promo-time">• hôm qua</span>
+                </div>
+            </div>
+        </div>
+
+        <button id="xemthem">Xem thêm</button>
+      <script src="newMM.js"></script>
 </body>
 <body>
     <footer>
@@ -251,7 +385,6 @@
                 <a href="#"><img style="width: 100px;height: auto;" src="img/logo-da-dang-ky-bo-cong-thuong-mau-do.jpg" alt="Chứng nhận"></a>
             </div>
         </div>
-       
         <div class="footer-bottom">
             <img style="width: 50px; height: auto; margin-left: 150px;" src="img/logo.png" style="border-radius: 50%;">
             <div class="chucuoi">
