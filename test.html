@@ -3,40 +3,397 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Popup Example</title>
-    <link rel="stylesheet" href="test.css">
+    <title>momo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body>
-    <div class="card-popup-trigger">
-        <h3>Đặt vé máy bay</h3>
-        <p>Nhấn vào đây để đặt vé bay và nhận khuyến mãi</p>
-    </div>
-    <!-- Popup Modal -->
-    <div id="popupModal" class="modal">
-        <div class="modal_inner">
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <h2>Tin tức</h2>
-                <span class="close" id="closePopup">&times;</span>
+<body> 
+    <header>
+        <div class="logo">
+            <img src="img/logo.png">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Dịch vụ</a>
+                    <ul class="submenu">
+                        <li><a href="#">Chuyển - nhận tiền</a></li>
+                        <li><a href="#">Game / Ứng dụng</a></li>
+                        <li><a href="#">Du lịch - Đi lại</a></li>
+                        <li><a href="#">Ví nhãn ái</a></li>
+                        <li><a href="#">QR Đa năng</a></li>
+                        <li><a href="#">Mở tài khoản ngân hàng</a></li>
+                        <li><a href="#">eSIM du lịch quốc tế</a></li>
+                    </ul>
+                </li>       
+                <li><a href="#">Về MoMo</a>
+                    <ul class="submenu">
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">An toàn bảo mật</a></li>
+                        <li><a href="#">Hỗ trợ</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>    
+                </li>
+                <li><a href="#">Tin tức</a>
+                    <ul class="submenu">
+                        <li><a href="#">Sự kiện</a></li>
+                        <li><a href="#">Khuyến mãi</a></li>
+                        <li><a href="#">Thông cáo</a></li>
+                        <li><a href="#">Cộng đồng</a></li>
+                        <li><a href="#">Thông báo</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Trợ giúp</a>
+                    <ul class="submenu">
+                        <li><a href="#">NFC là gì</a></li>
+                        <li><a href="#">Hỏi đáp</a></li>
+                        <li><a href="#">Hướng dẩn</a></li>
+                    </ul>    
+                </li>
+                <li><a href="#">Đối tác</a>
+                    <ul class="submenu">
+                        <li><a href="#">Đối tác thanh toán</a></li>
+                        <li><a href="#">Điểm thanh toán</a></li>
+                        <li><a href="#">Cộng tác viên momo</a></li>
+                        <li><a href="#">Đối tác doanh nghiệp</a></li>
+                        <li><a href="#">Tìm điểm thanh toán hóa đơn</a></li>
+                        <li><a href="#">Hợp tác doanh nghiệp</a></li>
+                    </ul>    
+                </li>
+                <li><a href="#">Blog MoMo</a>
+                    <ul class="submenu">
+                        <li><a href="#">Phim ảnh</a></li>
+                        <li><a href="#">Tài chính/ Bảo hiểm</a></li>
+                        <li><a href="#">Du lịch</a></li>
+                        <li><a href="#">Bảo mật</a></li>
+                        <li><a href="#">Đời sống</a></li>
+                        <li><a href="#">Mua sắm, Ăn uống</a></li>
+                        <li><a href="#">Tiện Ích</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <form action="#" method="get">
+                <input type="text" placeholder="Bạn tìm gì..." name="search">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </header>
+        <div class="slide-show">
+            <div class="list-images">
+                <img class="imge1" src="img/momo-amazone-s3-api-241004152032-638636520328188742.jpg">
+                <img src="img/momo-amazone-s3-api-241008152544-638639979446015000.jpg">
+                <img src="img/momo-amazone-s3-api-241009142903-638640809437171905.jpg">
+                <img src="img/momo-post-image-api-240703150316-638556157966720156.jpg">
             </div>
-            
-            <!-- Modal Body -->
-            <div class="modal-body">
-                <img src="https://example.com/your_image.png" alt="Popup Image">
-                <h3>Đặt vé máy bay trên MoMo Travel, nhận ngay thẻ quà thanh toán điện/nước 10.000Đ</h3>
-                <p><strong>Khuyến mãi:</strong> Từ 11/10/2024 đến 31/12/2024</p>
-                <p>Deal 10 điểm không có nhưng. Săn ưu đãi ngay trên MoMo Travel!</p>
-                <p>MoMo Travel luôn có vô số thẻ quà siêu hời, không chỉ giá vé Du lịch - Đi lại cực tốt mà còn có thêm những deal hấp dẫn khác!</p>
+            <div class="btns">    
+                <div class="btn-left btn"><i class='bx bx-chevron-left'></i></div>
+                <div class="btn-right btn"><i class='bx bx-chevron-right'></i></div>
             </div>
-
-            <!-- Modal Footer -->
-            <div class="modal-footer">
-                <button class="footer-btn">Đổi quà du lịch</button>
-                <button class="footer-btn">Đặt vé bay</button>
+            <div class="index-images">
+                <div class="index-item1 index-item-0 active1"></div>
+                <div class="index-item1 index-item-1"></div>
+                <div class="index-item1 index-item-2"></div>
+                <div class="index-item1 index-item-3"></div>
             </div>
         </div>
+        <script src="listImages.js"></script>
+        <div class="container">
+            <div class="header">
+                <h1>Tiện ích và dịch vụ</h1>
+                <p>Khám phá hàng trăm tính năng trên siêu ứng dụng giúp bạn có thể thực hiện mọi nhu cầu cuộc sống</p>
+            </div>
+            <div class="tabs">
+                <div class="tab active">
+                    <i class="fas fa-th"></i>
+                    <span>MoMo đề xuất</span>
+                </div>
+                <div class="tab">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Tài chính - Bảo hiểm</span>
+                </div>
+                <div class="tab">
+                    <i class="fas fa-ticket-alt"></i>
+                    <span>Mua vé xem phim</span>
+                </div>
+                <div class="tab">
+                    <i class="fas fa-heart"></i>
+                    <span>Ví Nhân Ái</span>
+                </div>
+                <div class="tab">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Trò chơi</span>
+                </div>
+                <div class="tab">
+                    <i class="fas fa-comments"></i>
+                    <span>Đánh giá</span>
+                </div>
+            </div>
+            <div class="services">
+                <div class="service">
+                    <i class="fas fa-user"></i>
+                    <span>Đăng nhập</span>
+                </div>
+                <div class="service">
+                    <i class="fas fa-wallet"></i>
+                    <span>Ví MoMo</span>
+                </div>
+                <div class="service">
+                    <i class="fas fa-bolt"></i>
+                    <span>Gói cước</span>
+                </div>
+                <div class="service">
+                    <i class="fas fa-receipt"></i>
+                    <span>Biên lai</span>
+                </div>
+                <div class="service">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Chuyển tiền</span>
+                </div>
+                <div class="service">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Thẻ tín dụng</span>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="nav-item">Tin tức</div>
+                <div class="nav-item">Khuyến mãi</div>
+                <div class="nav-item">Sự kiện</div>
+                <div class="nav-item">Hỗ trợ</div>
+                <div class="nav-item">Cửa hàng</div>
+            </div>
+            <div class="buttons">
+                <div class="button">Nạp tiền</div>
+                <div class="button">Rút tiền</div>
+                <div class="button">Chuyển khoản</div>
+                <div class="button">Thanh toán</div>
+            </div>
+            <div class="featured">
+                <h2>Tính năng nổi bật</h2>
+                <p>Khám phá các tính năng nổi bật nhất giúp bạn quản lý tài chính dễ dàng hơn bao giờ hết!</p>
+            </div>
+            <div class="card">
+                <h3>Thông báo mới</h3>
+                <p>Chúng tôi đã có những cải tiến mới cho ứng dụng. Hãy cập nhật phiên bản mới nhất để trải nghiệm!</p>
+            </div>
+        </div>
+
+    <div class="featured">
+        <h2>Tính năng Quỹ Nhóm giúp bạn chung tay góp quỹ</h2>
+        <p>Quản lý các giao dịch nạp và rút tiền với lịch sử rõ ràng của các thành viên, hỗ trợ việc góp quỹ dễ dàng và minh bạch.</p>
+        <p>Cùng lập Quỹ Nhóm với MoMo để thực hiện các mục tiêu tài chính chung với bạn bè và gia đình.</p>
     </div>
 
-    <script src="test.js"></script>
+    <div class="featured">
+        <h2>Có gì mới trên MoMo?</h2>
+    </div>
+    <div class="containerNMM">
+        <div class="menuNew">
+          <ul>
+            <li class="active" data-tab="moinhat">Mới nhất</li>
+            <li data-tab="khuyenmai">Khuyến mãi</li>
+            <li data-tab="thongbao">Thông báo</li>
+            <li data-tab="sukien">Sự kiện</li>
+            <li data-tab="thongcao">Thông cáo</li>
+          </ul>
+        </div>
+<!-- làm thẻ và popup -->
+        <div class="cards-container">
+            <div class="promo-card">
+                <div class="promo-card-header">
+                    <img src="flight-momo.png" alt="MoMo Travel" class="promo-card-image">
+                </div>
+                <div class="promo-card-body">
+                    <h4 class="promo-card-title">Đặt vé máy bay Nhận thẻ quà thanh toán Điện - Nước</h4>
+                    <p class="promo-card-description">Đặt vé máy bay trên MoMo Travel, nhận ngay thẻ quà thanh toán điện/nước 10.000Đ</p>
+                </div>
+                <div class="promo-card-footer">
+                    <span class="promo-label">KHUYẾN MÃI</span>
+                    <span class="promo-time">• hôm qua</span>
+                </div>
+            </div>
+            <!-- Popup Modal Ve May Bay -->
+            <div id="promoPopup1" class="popup-modal">
+                <div class="popup-content">
+                    <span class="close-btn">&times;</span>
+                    <div class="popup-header">
+                        <img src="flight-momo.png" alt="MoMo Travel Promo" class="popup-image">
+                    </div>
+                    <div class="popup-body">
+                        <h2>Đặt vé máy bay Nhận thẻ quà thanh toán Điện - Nước</h2>
+                        <p>Đặt vé máy bay trên MoMo Travel, nhận ngay thẻ quà thanh toán điện/nước 10.000Đ</p>
+                        <p><strong>Khuyến mãi:</strong> Từ 11/10/2024 đến 31/12/2024</p>
+                        <p>Deal 10 điểm không có nhưng. Săn ưu đãi ngay trên MoMo Travel!</p>
+                        <button class="action-btn">Đổi quà du lịch</button>
+                        <button class="action-btn">Đặt vé bay</button>
+                    </div>
+                </div>
+            </div>               
+            <!-- Thêm các thẻ khác theo mẫu tương tự -->
+            <div id="popupOverlay" class="popup-overlay"></div>
+            <div class="promo-card">
+                <div class="promo-card-header">
+                    <img src="app-store.png" alt="App Store" class="promo-card-image">
+                </div>
+                <div class="promo-card-body">
+                    <h4 class="promo-card-title">Khám phá Zenless Zone Zero 1.2: Hành trình mới đầy kịch tính</h4>
+                    <p class="promo-card-description">Tham gia ngay để khám phá nhiều tính năng mới và những món quà hấp dẫn!</p>
+                </div>
+                <div class="promo-card-footer">
+                    <span class="promo-label">THÔNG BÁO</span>
+                    <span class="promo-time">• hôm qua</span>
+                </div>
+            </div>
+            <!-- Popup Modal Game ZZZ -->
+            <div id="promoPopup2" class="popup-modal">
+                <div class="popup-content">
+                    <span class="close-btn">&times;</span>
+                    <div class="popup-header">
+                        <img src="flight-momo.png" alt="MoMo Travel Promo" class="popup-image">
+                    </div>
+                    <div class="popup-body">
+                        <h2>Khám phá Zenless Zone Zero 1.2: Hành trình mới đầy kịch tính</h2>
+                        <p>Phiên bản 1.2 "Tour de Inferno" - Đường đua lửa ngục của Zenless Zone Zero mở ra cốt truyện hấp dẫn cùng những cải tiến về lối chơi, nâng trải nghiệm của bạn lên một tầm cao mới. Thanh toán App Store dễ dàng với MoMo, giảm ngay 40.000đ!</p>
+                        <p><strong>Khuyến mãi:</strong> Từ 11/10/2024 đến 31/12/2024</p>
+                        <p>Deal 10 điểm không có nhưng. Săn ưu đãi ngay trên MoMo Travel!</p>
+                        <button class="action-btn">THANH TOÁN NGAY</button>
+                        <button class="action-btn">LIÊN KẾT NGAY</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Thêm tiếp các thẻ khác -->
+            <div class="promo-card">
+                <div class="promo-card-header">
+                    <img src="app-store.png" alt="App Store" class="promo-card-image">
+                </div>
+                <div class="promo-card-body">
+                    <h4 class="promo-card-title">Khám phá Zenless Zone Zero 1.2: Hành trình mới đầy kịch tính</h4>
+                    <p class="promo-card-description">Tham gia ngay để khám phá nhiều tính năng mới và những món quà hấp dẫn!</p>
+                </div>
+                <div class="promo-card-footer">
+                    <span class="promo-label">THÔNG BÁO</span>
+                    <span class="promo-time">• hôm qua</span>
+                </div>
+            </div>
+            <div class="promo-card">
+                <div class="promo-card-header">
+                    <img src="app-store.png" alt="App Store" class="promo-card-image">
+                </div>
+                <div class="promo-card-body">
+                    <h4 class="promo-card-title">Khám phá Zenless Zone Zero 1.2: Hành trình mới đầy kịch tính</h4>
+                    <p class="promo-card-description">Tham gia ngay để khám phá nhiều tính năng mới và những món quà hấp dẫn!</p>
+                </div>
+                <div class="promo-card-footer">
+                    <span class="promo-label">THÔNG BÁO</span>
+                    <span class="promo-time">• hôm qua</span>
+                </div>
+            </div>
+            <div class="promo-card">
+                <div class="promo-card-header">
+                    <img src="app-store.png" alt="App Store" class="promo-card-image">
+                </div>
+                <div class="promo-card-body">
+                    <h4 class="promo-card-title">Khám phá Zenless Zone Zero 1.2: Hành trình mới đầy kịch tính</h4>
+                    <p class="promo-card-description">Tham gia ngay để khám phá nhiều tính năng mới và những món quà hấp dẫn!</p>
+                </div>
+                <div class="promo-card-footer">
+                    <span class="promo-label">THÔNG BÁO</span>
+                    <span class="promo-time">• hôm qua</span>
+                </div>
+            </div>
+            <div class="promo-card">
+                <div class="promo-card-header">
+                    <img src="app-store.png" alt="App Store" class="promo-card-image">
+                </div>
+                <div class="promo-card-body">
+                    <h4 class="promo-card-title">Khám phá Zenless Zone Zero 1.2: Hành trình mới đầy kịch tính</h4>
+                    <p class="promo-card-description">Tham gia ngay để khám phá nhiều tính năng mới và những món quà hấp dẫn!</p>
+                </div>
+                <div class="promo-card-footer">
+                    <span class="promo-label">THÔNG BÁO</span>
+                    <span class="promo-time">• hôm qua</span>
+                </div>
+            </div>
+        </div>
+
+        <button id="xemthem">Xem thêm</button>
+      <script src="newMM.js"></script>
+</body>
+<body>
+    <footer>
+        <div class="footer-container">
+            <div class="vechungtoi">
+                <h5>Về chúng tôi</h5>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">An toàn - Bảo mật</a></li>
+                    <li><a href="#">Điều khoản điều lệ</a></li>
+                    <li><a href="#">Chính sách quyền riêng tư</a></li>
+                    <li><a href="#">Điều khoản liên kết Google trên ứng dụng MoMo</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="#">Hỏi đáp</a></li>
+                </ul>
+            </div>
+            <div class="dichvunoibat">
+                <h5>Dịch vụ nổi bật</h5>
+                <ul>
+                    <li><img src="img/video-camera.png" alt="video-camera"><a href="#">  Vé xem phim</a></li>
+                    <li><img src="img/car.png" alt="car"><a href="#">   Bảo hiểm Ô tô</a></li>
+                    <li><img src="img/airplane.png" alt="airplane"><a href="#">  Vé máy bay</a></li>
+                    <li><img src="img/wallet.png" alt=""><a href="#">  Ví nhân ái</a></li>
+                    <li><img src="img/money-bag.png" alt=""><a href="#">  Túi thần tài</a></li>
+                    <li> <img src="img/smartphone.png" alt=""><a href="#">  Ví trả sau</a></li>
+                    <li><img src="img/money-bag (1).png" alt=""><a href="#">  Vay nhanh</a></li>
+                    <li><img src="img/percentage.png" alt=""><a href="#">  Trả Góp Apple</a></li>
+                </ul>
+            </div>
+            <div class="cskh">
+                <h5>Chăm sóc khách hàng</h5>
+                <p>Địa chỉ: <a href="#">Lầu 6, Toà nhà Phú Mỹ Hưng, số 8 Hoàng Văn Thái, khu phố 1, Phường Tân Phú, Quận 7, Thành phố Hồ Chí Minh</a> </p>
+                <p>Hotline: <a href="#">1900 5454 41</a> (Phí 1.000đ/phút)</p>
+                <p>Email: <a href="#">hotro@momo.vn</a></p>
+                <p>Tổng đài gọi ra: <a href="#">028.7306.5555</a> - <a href="#">028.9999.5555</a> - <a href="#">028.5555.5555</a>, các đầu số di động Brandname MoMo</p>
+                <p><button><img style="width: 20%;" src="img/man hinh.jpg" alt=""> hướng dẫn trợ giúp trên ứng dụng momo</button></p>
+                <h5>Hợp tác doanh nghiệp</h5>
+                <p>Hotline: <a href="#">1900 636 652  (Phí 1.000đ/phút)</a></p>
+                <p>Email: <a href="#">merchant.care@momo.vn</a></p>
+                <p>Website: <a href="#">business.momo.vn</a></p><p><button><img style="width: 20%;" src="tay.jpg" alt=""> Hợp tác doanh nghiệp
+                    Đăng ký hợp tác
+                    </button></p>
+            </div>
+            <div class="ketnoi">
+                <h5>Kết nối với chúng tôi</h5>
+                <a href="#"><img src="img/facebook.png" alt=""></a>
+                <a href="#"><img src="img/linkedin.png" alt=""></a>
+                <a href="#"><img src="img/youtube (1).png" alt=""></a>
+                <h5>Tải ứng dụng trên điện thoại</h5>
+                <div class="qr-download-container">
+                    <img src="img/qr.jpg" alt="QR Code" class="qr-code">
+                    <div class="app-downloads">
+                        <a href="#" class="app-store">
+                            <img src="img/apple (2).png" alt="Tải trên App Store">
+                        </a>
+                        <a href="#" class="google-play">
+                            <img src="img/google-play.png" alt="Tải trên Google Play">
+                        </a>
+                    </div>
+                    </div>
+                
+                <p>Được chứng nhận bởi:</p>
+                <a href="#"><img style="width: 100px;height: auto;" src="img/logo-da-dang-ky-bo-cong-thuong-mau-do.jpg" alt="Chứng nhận"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <img style="width: 50px; height: auto; margin-left: 150px;" src="img/logo.png" style="border-radius: 50%;">
+            <div class="chucuoi">
+                <b>CÔNG TY CỔ PHẦN DỊCH VỤ DI ĐỘNG TRỰC TUYẾN</b><br>
+                Địa chỉ: Lầu 6, Toà nhà Phú Mỹ Hưng, số 8 Hoàng Văn Thái, P. Tân Phú, Q. 7, Thành phố Hồ Chí Minh
+            </div>
+            <div style="margin-left:auto;">©Copyright M.Service 2024</div>
+        </div>
+    </footer>
+    
 </body>
 </html>
