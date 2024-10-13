@@ -515,7 +515,7 @@ margin-right: 50px;
   .containerNMM {
     width: 80%;
     margin: 0 auto;
-  }
+  } 
   
   .menuNew ul {
     display: flex;
@@ -536,29 +536,6 @@ margin-right: 50px;
     color: #ff66b2;
   }
   
-  /* .cards {
-    display: none;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  
-  .cards.active {
-    display: grid;
-  }
-  
-  .card {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-  }
-   */
   #xemthem {
     display: block;
     margin: 20px auto;
@@ -574,6 +551,11 @@ margin-right: 50px;
     background-color: #e0559b;
 }
 
+.containerNMM {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .cards-container {
     display: flex;
     flex-wrap: wrap;
@@ -581,6 +563,7 @@ margin-right: 50px;
     justify-content: center;
     width: 80%; /* Giảm chiều rộng xuống 80% */
     margin: 0 auto; /* Căn giữa container */
+    height: 400px; /* Đặt chiều cao cố định cho toàn bộ card */
 }
 
 .promo-card {
@@ -610,9 +593,17 @@ margin-right: 50px;
 }
 
 .promo-card-body {
-    padding: 16px;
+    padding: 10px;
+    flex-grow: 1;
+    /* Đặt chiều cao tối thiểu cho body để các thẻ có chiều cao đồng đều */
+    min-height: 150px;
 }
-
+.promo-card-header img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
 .promo-card-title {
     font-size: 16px;
     font-weight: bold;
@@ -629,23 +620,22 @@ margin-right: 50px;
 }
 
 .promo-card-footer {
-    padding: 16px;
-    border-top: 1px solid #eaeaea;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    height: 50px; /* Đặt chiều cao cố định cho footer */
 }
 
 .promo-label {
-    font-size: 12px;
-    color: #ed489b;
     font-weight: bold;
-    transition: color 0.3s ease-in-out;
+    color: #ed489b;
 }
 
 .promo-time {
-    font-size: 12px;
-    color: #999;
+    color: #666;
 }
 
 .promo-card:hover .promo-label,
@@ -672,7 +662,41 @@ margin-right: 50px;
     /* margin-bottom: 50px; */
     overflow: hidden; 
     line-height: 34px; /* Khoảng cách giữa các dòng là 24 pixel */
+    display: none; /* Ẩn popup mặc định */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Đổ bóng cho popup */
 }
+
+@keyframes modal-show{
+    from {
+        bottom: -100px; /* Bắt đầu ở dưới màn hình */
+        opacity: 0; /* Bắt đầu với độ trong suốt 0 */
+    }
+    to {
+        top: -50%; /* Cuối cùng đưa popup về giữa màn hình */
+        opacity: 1; /* Cuối cùng là độ trong suốt 1 */
+    }
+}
+.popup-modal.show {
+    display: block; /* Hiển thị popup */
+    animation: modal-show 0.4s forwards; /* Sử dụng animation */
+}
+
+/* Thêm overlay */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Làm tối nền */
+    display: none; /* Mặc định ẩn */
+    z-index: 999; /* Đảm bảo overlay nằm phía trên nội dung khác */
+}
+
+.popup-overlay.show {
+    display: block; /* Hiển thị overlay */
+}
+
 .popup-modal-header {
     border-top-left-radius: 2%;  /* Bo góc bên trái trùng với popup-modal */
     border-top-right-radius: 2%; /* Bo góc bên phải trùng với popup-modal */
@@ -705,6 +729,8 @@ margin-right: 50px;
     max-height: 80%; /* Chiều cao tối đa cho phần cuộn */
     box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước tổng thể */
 }
+
+
 .popup-body h2 {
     color: #ed489b;
 }
@@ -788,32 +814,7 @@ margin-right: 50px;
     background-color: #ed489b;
 }
 
-/* Thêm overlay */
-.popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ trong suốt */
-    z-index: 999;
-    display: none; /* Ẩn khi không mở popup */
-}
 
-@keyframes modal-show{
-    from {
-        bottom: -100px; /* Bắt đầu ở dưới màn hình */
-        opacity: 0; /* Bắt đầu với độ trong suốt 0 */
-    }
-    to {
-        top: -50%; /* Cuối cùng đưa popup về giữa màn hình */
-        opacity: 1; /* Cuối cùng là độ trong suốt 1 */
-    }
-}
-.popup-modal.show {
-    display: block; /* Hiển thị popup */
-    animation: modal-show 0.4s forwards; /* Sử dụng animation */
-}
 
 .service-intro {
     padding: 20px;
@@ -849,3 +850,30 @@ margin-right: 50px;
     color: #ed489b;
     font-weight: bold;
   }
+
+  .full-image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Nền tối */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001; /* Đảm bảo nằm trên cùng */
+}
+
+.full-image-modal .full-image {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close-full-image {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
