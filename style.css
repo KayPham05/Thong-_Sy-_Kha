@@ -661,30 +661,102 @@ margin-right: 50px;
     bottom: 50%; /* Bắt đầu từ dưới */
     transform: translate(-50%, 50%); /* Đưa popup vào giữa màn hình theo chiều ngang */
     z-index: 1000;
-    background-color: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     display: none; /* Ẩn khi không hiển thị */
     opacity: 0; /* Bắt đầu với độ trong suốt 0 */
     transition: display 0.4s ease; /* Hiệu ứng chuyển đổi cho display */
+    border-radius: 2%; 
+    background-color: white; 
+    /* top: 50%; */
+    width: 40%;
+    margin-top: 50px;
+    /* margin-bottom: 50px; */
+    overflow: hidden; 
+    line-height: 34px; /* Khoảng cách giữa các dòng là 24 pixel */
+}
+.popup-modal-header {
+    border-top-left-radius: 2%;  /* Bo góc bên trái trùng với popup-modal */
+    border-top-right-radius: 2%; /* Bo góc bên phải trùng với popup-modal */
+    padding: 10px;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;  /* Căn giữa chữ Tin tức */
+    align-items: center;      /* Căn giữa theo trục dọc */
+    position: relative;       /* Để dễ dàng định vị nút X */
+}
+
+.popup-modal-header p {
+    margin: 0;
+    font-size: 15px;    
+    font-weight: normal;
+    position: relative;
+    z-index: 1;              /* Để nút X không che mất chữ Tin tức */
 }
 /* Modal Content */
 .popup-content {
     background-color: #fff;
     margin: 5% auto; 
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 12px;
+    border: 1px solid white;
+    width: 99.5%;
+    /* max-width: 600px; */
+    /* border-radius: 12px; */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Thanh cuộn dọc */
+    flex: 1; /* Cho phép phần body chiếm khoảng trống còn lại */
+    max-height: 80%; /* Chiều cao tối đa cho phần cuộn */
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước tổng thể */
+}
+.popup-body h2 {
+    color: #ed489b;
 }
 
+.popup-body {
+    padding: 20px; /* Điều chỉnh padding theo ý muốn */
+}
+
+.popup-footer {
+    display: flex; /* Sử dụng Flexbox để sắp xếp các nút */
+    justify-content: center; /* Căn giữa và chia đều khoảng cách giữa các nút */
+    padding: 0px 20px; /* Padding cho footer */
+    background-color: #f2f2f2; /* Màu nền cho footer */
+}
+.popup-footer button {
+    background-color: #ed489b; /* Màu nền cho nút */
+    color: white; /* Màu chữ */
+    border: none; /* Không có đường viền */
+    padding: 8px 15px; /* Tăng kích thước cho nút */
+    border-radius: 5px; /* Bo góc cho nút */
+    cursor: pointer; /* Con trỏ chuột khi di chuột vào nút */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển đổi cho màu nền */
+    font-weight: bold; /* In đậm chữ */
+    margin: 0 10px; /* Tăng khoảng cách giữa hai nút */
+    font-size: 17px; /* Tăng kích cỡ chữ */
+}
+
+.popup-footer button:hover {
+    background-color:  #ed489b;; /* Màu nền khi di chuột vào nút */
+}
+.KM{
+    color:green;
+    cursor: pointer;
+    
+}
+
+.font {
+    font-weight: bold;
+    color: #828282;
+    font-size: 18px;
+    line-height: 160%;
+}
+/* .pink {
+    color: #ed489b;
+} */
 /* Close Button */
 .close-btn {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+    position: absolute;
+    right: 5px;              /* Đặt nút X nằm về phía bên phải */
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 2;
 }
 
 .close-btn:hover,
@@ -702,7 +774,7 @@ margin-right: 50px;
 
 /* Popup buttons */
 .action-btn {
-    background-color: #ff4d4f;
+    background-color: #ed489b;
     border: none;
     color: white;
     padding: 12px 20px;
@@ -713,7 +785,7 @@ margin-right: 50px;
 }
 
 .action-btn:hover {
-    background-color: #ff7875;
+    background-color: #ed489b;
 }
 
 /* Thêm overlay */
@@ -734,7 +806,7 @@ margin-right: 50px;
         opacity: 0; /* Bắt đầu với độ trong suốt 0 */
     }
     to {
-        bottom: 50%; /* Cuối cùng đưa popup về giữa màn hình */
+        top: -50%; /* Cuối cùng đưa popup về giữa màn hình */
         opacity: 1; /* Cuối cùng là độ trong suốt 1 */
     }
 }
@@ -742,3 +814,38 @@ margin-right: 50px;
     display: block; /* Hiển thị popup */
     animation: modal-show 0.4s forwards; /* Sử dụng animation */
 }
+
+.service-intro {
+    padding: 20px;
+    background-color: #fff; /* Nền trắng để tương phản với khung */
+    border: 2px solid #0066cc; /* Khung màu xanh */
+    border-radius: 8px; /* Bo góc khung */
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Tạo bóng để khung nổi bật */
+  }
+  .service-intro h2 {
+    font-size: 18px;
+    color: #0066cc;
+    margin-bottom: 10px;
+  }
+  
+  .service-intro p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .service-intro ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .service-intro ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .service-intro ul li strong {
+    color: #ed489b;
+    font-weight: bold;
+  }
