@@ -345,14 +345,81 @@ nav ul li a {
     }
 }
 /* ===============================saicanh */
-.sai{
-    background-color: #ffffff;
+.saicanh{
+    background-color: #fff9fb;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 70px;
 }
-/* phan duoi*/
+.noi-dung{
+    display:;
+}
+.noi-dung .active2{
+    display: contents;
+}
+.nutt{
+    padding: 2px;
+    background-color: white;
+    margin-top: -100px;
+    margin-left: -470px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 2px solid #ddd; 
+}
+.nutt button{
+    background-color: white;
+    border: none;
+border-radius: 20px;
+}
+.nutt button span {
+    font-weight: bold;
+    display: block; /* Đảm bảo mỗi thẻ <span> hiển thị trên dòng riêng */
+}
+.noi-dung{
+    width: 800px;
+    height: auto;
+    background-color: white;
+    margin-left: -70px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 10px;
+}
+.thongtin{
+    display: flex;
+    flex-direction: row;
+}
+.thongtin img{
+    width: 70px;
+    height: 70px;
+}
+.noi-dung button{
+    border: none;
+    background-color: white;
+    font-size: 20px;
+
+}
+.bangtt div{
+   display: flex;
+   /* justify-content: center;
+   align-items: center; */
+   flex-direction: column;
+   
+}
+.bangtt{
+    display: flex;
+}
+.thongtin span {
+    width: 300px;             /* Chiều rộng cố định */
+    height: 100px;            /* Chiều cao cố định */
+    padding: 10px;
+    margin: 10px 0;
+}
+/* ----------------- */
 .chon {
-    margin-top: 100px;
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: white;
@@ -396,8 +463,7 @@ ul {
 }
 
 .content {
-    display: none; /* Mặc định ẩn */
-    flex-direction: row; /* Căn chỉnh theo hàng ngang */
+    display: none; 
 }
 
 .content ul {
@@ -917,3 +983,4 @@ margin-right: 50px;
     font-size: 30px;
     cursor: pointer;
 }
+  
