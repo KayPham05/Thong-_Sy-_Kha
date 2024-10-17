@@ -19,7 +19,7 @@ body {
 }
 
 .header h1 {
-    color: #d81b60;
+    color: rgb(212, 42, 135);
     font-size: 24px;
     margin: 0;
 }
@@ -40,13 +40,13 @@ body {
 .tab {
     padding: 10px 20px;
     cursor: pointer;
-    color: #d81b60;
+    color: rgb(212, 42, 135);
     border-bottom: 3px solid transparent;
     text-align: center;
 }
 
 .tab.active {
-    border-bottom: 3px solid #d81b60;
+    border-bottom: 3px solid rgb(212, 42, 135);
 }
 
 .tab i {
@@ -255,7 +255,7 @@ nav ul li a {
     padding: 10px;
     margin: 5px;
     text-align: center;
-    color: #e54aac;
+    color: rgb(212, 42, 135);
 }
 
 .buttons {
@@ -273,7 +273,7 @@ nav ul li a {
     border-radius: 25px;
     padding: 10px 20px;
     margin: 5px;
-    color: #d92592;
+    color: rgb(212, 42, 135);
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -294,7 +294,7 @@ nav ul li a {
 }
 
 .featured h2 {
-    color: #d92592;
+    color: rgb(212, 42, 135);
     text-align: center;
 }
 
@@ -306,12 +306,12 @@ nav ul li a {
 
 /* Tab styles */
 .active-tab {
-    border-bottom: 4px solid #ec4899; /* Gạch chân dưới tab đang hoạt động */
+    border-bottom: 4px solid rgb(212, 42, 135);/* Gạch chân dưới tab đang hoạt động */
     text-decoration: none; /* Loại bỏ gạch chân */
 }
 
 .active-tab i, .active-tab p {
-    color: #ec4899; /* Đổi màu cho biểu tượng và văn bản */
+    color: rgb(212, 42, 135);/* Đổi màu cho biểu tượng và văn bản */
 }
 
 
@@ -356,7 +356,7 @@ nav ul li a {
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: white;
-    color: #d42a87;
+    color: rgb(212, 42, 135);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -572,15 +572,15 @@ margin-right: 50px;
   }
   
   .menuNew ul li.active {
-    border-bottom: 3px solid #ff66b2;
-    color: #ff66b2;
+    border-bottom: 3px solid rgb(212, 42, 135);
+    color: rgb(212, 42, 135);
   }
   
   #xemthem {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    background-color: #ff66b2;
+    background-color: rgb(212, 42, 135);
     color: white;
     border: none;
     border-radius: 5px;
@@ -588,7 +588,7 @@ margin-right: 50px;
   }
   
   #xemthem:hover {
-    background-color: #e0559b;
+    background-color: rgb(212, 42, 135);
 }
 
 .containerNMM {
@@ -601,9 +601,15 @@ margin-right: 50px;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+<<<<<<< HEAD
+    width: 80%; /* Giảm chiều rộng xuống 80% */
+    margin: 0 auto; /* Căn giữa container */
+    height: auto; /* Đặt chiều cao cố định cho toàn bộ card */
+=======
     width: 80%; 
     margin: 0 auto;
     height: 400px; 
+>>>>>>> 9875eaac742b583b4d31560ac8e7cb1bf81b8fa3
 }
 
 .promo-card {
@@ -671,7 +677,7 @@ margin-right: 50px;
 
 .promo-label {
     font-weight: bold;
-    color: #ed489b;
+    color: rgb(212, 42, 135);
 }
 
 .promo-time {
@@ -681,7 +687,7 @@ margin-right: 50px;
 .promo-card:hover .promo-label,
 .promo-card:hover .promo-card-title,
 .promo-card:hover .promo-card-description {
-    color: #ed489b;
+    color: rgb(212, 42, 135);
 }
 
 /* The Modal (background) */
@@ -697,7 +703,7 @@ margin-right: 50px;
     border-radius: 2%; 
     background-color: white; 
     /* top: 50%; */
-    width: 40%;
+    width: 49%;
     margin-top: 50px;
     /* margin-bottom: 50px; */
     overflow: hidden; 
@@ -758,7 +764,7 @@ margin-right: 50px;
 /* Modal Content */
 .popup-content {
     background-color: #fff;
-    margin: 5% auto; 
+    margin-bottom: 50px; 
     border: 1px solid white;
     width: 99.5%;
     /* max-width: 600px; */
@@ -772,7 +778,7 @@ margin-right: 50px;
 
 
 .popup-body h2 {
-    color: #ed489b;
+    color: rgb(212, 42, 135);
 }
 
 .popup-body {
@@ -786,7 +792,7 @@ margin-right: 50px;
     background-color: #f2f2f2; /* Màu nền cho footer */
 }
 .popup-footer button {
-    background-color: #ed489b; /* Màu nền cho nút */
+    background-color: rgb(212, 42, 135); /* Màu nền cho nút */
     color: white; /* Màu chữ */
     border: none; /* Không có đường viền */
     padding: 8px 15px; /* Tăng kích thước cho nút */
@@ -799,7 +805,7 @@ margin-right: 50px;
 }
 
 .popup-footer button:hover {
-    background-color:  #ed489b;; /* Màu nền khi di chuột vào nút */
+    background-color:   rgb(212, 42, 135); /* Màu nền khi di chuột vào nút */
 }
 .KM{
     color:green;
@@ -840,7 +846,7 @@ margin-right: 50px;
 
 /* Popup buttons */
 .action-btn {
-    background-color: #ed489b;
+    background-color: rgb(212, 42, 135);
     border: none;
     color: white;
     padding: 12px 20px;
@@ -851,7 +857,7 @@ margin-right: 50px;
 }
 
 .action-btn:hover {
-    background-color: #ed489b;
+    background-color: rgb(212, 42, 135);
 }
 
 
@@ -887,7 +893,7 @@ margin-right: 50px;
   }
   
   .service-intro ul li strong {
-    color: #ed489b;
+    color: rgb(212, 42, 135);
     font-weight: bold;
   }
 
@@ -916,4 +922,210 @@ margin-right: 50px;
     color: white;
     font-size: 30px;
     cursor: pointer;
+}
+
+/* CSS cho nền mờ và popup mới */
+.popup-overlay-new {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 2000;
+}
+
+.popup-modal-new {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 50%;
+    display: none;
+    z-index: 2000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    height: 70%;
+}
+
+.popup-content-new {
+    display: flex;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+.popup-left-new-content {
+    height: 100%;
+}
+.step-label-new1 {
+    position: absolute;
+    top: 2px; /* Đặt text ở vị trí khoảng 1/3 chiều cao của ảnh */
+    left: 110px; /* Điều chỉnh vị trí theo ý muốn */
+}
+
+.step-label-new2 {
+    position: absolute;
+    top: 180px; /* Đặt text ở vị trí khoảng 1/3 chiều cao của ảnh */
+    left: 110px; /* Điều chỉnh vị trí theo ý muốn */
+}
+
+.step-label-new3 {
+    position: absolute;
+    top: 355px; /* Đặt text ở vị trí khoảng 1/3 chiều cao của ảnh */
+    left: 110px; /* Điều chỉnh vị trí theo ý muốn */
+}
+
+.popup-left-new {
+    width: 50%;
+    height: 100%;
+}
+.step-new {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.step-font {
+    display: flex;
+}
+.step-new img {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.promotion-new {
+    margin-top: 20px;
+}
+
+.btn-new {
+    background-color: rgb(212, 42, 135);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-right-new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  rgb(212, 42, 135);
+    width: 50%;
+    padding: 0px;
+    height: 100%;
+}
+
+
+.qr-code-new {
+    width: 100%;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.close-btn-new {
+    position: absolute;
+    top: 6px;
+    right: 26px;
+    font-size: 50px;
+    cursor: pointer;
+    color: rgb(208, 201, 201);
+}
+.font-QR {
+    font-weight: bold;
+    color: #828282;
+    font-size: 15px;
+    line-height: 100%;
+}
+.popup-footer-left-new {
+    display: flex;
+    align-items: center;
+    background-color: #ffe4f2;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup-footer-content-new {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    border: solid 2px grey;
+}
+.promo-icon-footer-new {
+    margin-right: 15px;
+}
+
+.promo-icon-footer-new svg {
+    width: 40px;
+    height: 40px;
+}
+
+.promo-text-footer-new {
+    font-size: 14px;
+    color: #333;
+}
+
+.promo-text-footer-new strong {
+    color:  rgb(212, 42, 135);
+}
+
+.promo-button-footer-new {
+    margin-left: 10px;
+
+}
+
+.btn-view-now-footer-new {
+    background-color: rgb(212, 42, 135);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 2px;
+    
+}
+
+.btn-view-now-footer-new:hover {
+    background-color: rgb(212, 42, 135);
+}
+
+.font-gift {
+    line-height: 100%;
+}
+
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(212, 42, 135); /* Đường scan mờ */
+    box-shadow: 0 0 90px 20px rgb(212, 42, 135);/* Bóng sáng phía sau */
+    animation: scan-animation 3s ease-in-out infinite;
+}
+@keyframes scan-animation {
+    0% {
+        top: -40%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+.qr-code-container {
+    position: absolute;
+    width: 280px; /* Đặt kích thước phù hợp cho mã QR */
+    height: 290px;
+    margin: auto;
+    overflow: hidden; /* Ẩn phần vượt quá của đường quét */
+}
+
+.qr-code {
+    width: 100%;
+    height: 100%;
 }

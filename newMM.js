@@ -70,6 +70,39 @@ document.querySelectorAll('.popup-image').forEach(image => {
     });
 });
 
+// popup QRSCAN
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Lấy các phần tử popup
+    const openPopupBtns = document.querySelectorAll('.open-popup-btn');
+    const closeBtn = document.querySelector('.close-btn-new');
+    const popupOverlay = document.getElementById('popupOverlayNew');
+    const popupModal = document.getElementById('popupModalNew');
+
+    // Mở popup khi nhấn nút
+    openPopupBtns.forEach(button => {
+        button.addEventListener('click', function () {
+            popupOverlay.style.display = 'block';
+            popupModal.style.display = 'block';
+        });
+    });
+
+    // Đóng popup khi nhấn nút đóng
+    closeBtn.addEventListener('click', function () {
+        popupOverlay.style.display = 'none';
+        popupModal.style.display = 'none';
+    });
+
+    // Đóng popup khi click bên ngoài
+    window.addEventListener('click', function (event) {
+        if (event.target === popupOverlay) {
+            popupOverlay.style.display = 'none';
+            popupModal.style.display = 'none';
+        }
+    });
+});
+
+
 // Hàm tính toán khoảng thời gian
 function timeSince(date) {
     let now = new Date();
