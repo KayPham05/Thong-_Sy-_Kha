@@ -688,14 +688,88 @@
 </body>
 
 <body>
-    <!-- phần code từ dưới lên trên của sỹ dz -->
-    <div class="chon">
-        <h1>Thanh toán an toàn - Bảo mật tuyệt đối</h1>
-        <div class="nut">
-            <button onclick="showContent('c1')"><h4>Bảo chứng ngân hàng</h4></button>
-            <button onclick="showContent('c2')"><h4>Bảo mật đa tầng</h4></button>
-            <button onclick="showContent('c3')"><h4>Đạt chuẩn quốc tế</h4></button>
-            
+    <!-- saicanh --------------------------------->
+     <div class="sai">
+        <img src="img/saicanhantam.png" alt="saicanhantam">
+        <div class="nuttimchuyen">
+            <button onclick="showContent('c4')">Tìm chuyến bay</button>
+            <button onclick="showContent('c5')">Chặng bay giá rẻ</button>
+            <button onclick="showContent('c6')">Điểm đến nổi bật</button>
+        </div>
+        <!-- noidung -->
+        <div class="bb">
+            <div id="c4" class="content active">
+                <input type="radio" id="tikvao" name="tik">
+                <span>Một chiều</span>
+                <input type="radio" id="tikvao" name="tik">
+                <span>Khứ hồi</span>
+                <div style="border: 2px solid;">
+                    <button>Nơi đi Nha Trang (CXR)  </button> 
+                    <button>Nơi đến Hà Nội (HAN)</button><button>Ngày đi
+                        17-10-2024</button><button>Hành khách
+                            1 Người lớn`</button><button>Tìm kiếm</button>
+                        </div>
+                        <p>
+                            Ngập tràn ưu đãi
+                            Ngập tràn ưu đãi
+                            Đặt vé, đặt phòng trên Ví MoMo với giá cạnh tranh nhất.
+                        </p>
+                        <p>
+                            Thanh toán siêu bảo mật
+                            Thanh toán siêu bảo mật
+                            Ví MoMo đáp ứng các tiêu chuẩn thanh toán với chứng chỉ bảo mật quốc tế PCI DSS.
+                        </p>
+                        <p>
+                            Hỗ trợ khách hàng 24/7
+                            Đội ngũ nhân viên hỗ trợ khách hàng luôn sẵn sàng giúp đỡ bạn.
+                        </p>
+                    </div>
+                    <div id="c5">
+                        Giá vé máy bay rẻ nhất, tự động cập nhật từ ứng dụng MoMo.
+                        
+                        
+                        Vé máy bay
+                        Hồ Chí Minh → Hà Nội
+                        Ngày đi : 14-11-2024
+                        Chỉ từ : 1.481.600 đ
+                        Xem ngay
+                        
+                        Vé máy bay
+                        Hồ Chí Minh → Đà Nẵng
+                        Ngày đi : 16-11-2024
+                        Chỉ từ : 1.059.600 đ
+                        Xem ngay
+                        
+                        Vé máy bay
+                        Hồ Chí Minh → Phú Quốc
+                        Ngày đi : 02-01-2025
+                        Chỉ từ : 951.600 đ
+                        Xem ngay
+                        
+                        Vé máy bay
+                        Hồ Chí Minh → Đà Lạt
+                        Ngày đi : 03-11-2024
+                        Chỉ từ : 822.000 đ
+                        Xem ngay
+                        * Giá vé có thể thay đổi theo thời điểm đặt mua. Vui lòng kiểm tra tại chức năng Tìm kiếm vé hoặc App MoMo.
+                    </div>
+                    <div id="c6">
+                        
+                    </div>
+                </div>
+                Tìm hiểu thêm
+            </div>
+                
+                
+                <!-- phần code từ dưới lên trên của sỹ dz -->
+                
+                <div class="chon">
+                    <h1>Thanh toán an toàn - Bảo mật tuyệt đối</h1>
+                    <div class="nut">
+                        <button id="myButton" onclick="showContent('c1')" ><h4>Bảo chứng ngân hàng</h4></button>
+                        <button id="myButton" onclick="showContent('c2')"><h4>Bảo mật đa tầng</h4></button>
+                        <button onclick="showContent('c3')"><h4>Đạt chuẩn quốc tế</h4></button>
+                        
         </div>
     
         <!-- Nội dung -->
@@ -734,29 +808,26 @@
         <div class="footer-container">
             <div class="vechungtoi">
                 <h5>Về chúng tôi</h5>
-                <ul>
-                    <li><a href="#">Giới thiệu</a></li>
-                    <li><a href="#">An toàn - Bảo mật</a></li>
-                    <li><a href="#">Điều khoản điều lệ</a></li>
-                    <li><a href="#">Chính sách quyền riêng tư</a></li>
-                    <li><a href="#">Điều khoản liên kết Google trên ứng dụng MoMo</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Liên hệ</a></li>
-                    <li><a href="#">Hỏi đáp</a></li>
-                </ul>
+                    <p><a href="#">Giới thiệu</a></p>
+                    <p><a href="#">An toàn - Bảo mật</a></p>
+                    <p><a href="#">Điều khoản điều lệ</a></p>
+                    <p><a href="#">Chính sách quyền riêng tư</a></p>
+                    <p><a href="#">Điều khoản liên kết Google trên ứng dụng MoMo</a></p>
+                    <p><a href="#">Blog</a></p>
+                    <p><a href="#">Liên hệ</a></p>
+                    <p><a href="#">Hỏi đáp</a></p>
             </div>
             <div class="dichvunoibat">
                 <h5>Dịch vụ nổi bật</h5>
-                <ul>
-                    <li><img src="img/video-camera.png" alt="video-camera"><a href="#">  Vé xem phim</a></li>
-                    <li><img src="img/car.png" alt="car"><a href="#">   Bảo hiểm Ô tô</a></li>
-                    <li><img src="img/airplane.png" alt="airplane"><a href="#">  Vé máy bay</a></li>
-                    <li><img src="img/wallet.png" alt=""><a href="#">  Ví nhân ái</a></li>
-                    <li><img src="img/money-bag.png" alt=""><a href="#">  Túi thần tài</a></li>
-                    <li> <img src="img/smartphone.png" alt=""><a href="#">  Ví trả sau</a></li>
-                    <li><img src="img/money-bag (1).png" alt=""><a href="#">  Vay nhanh</a></li>
-                    <li><img src="img/percentage.png" alt=""><a href="#">  Trả Góp Apple</a></li>
-                </ul>
+                    <p><img src="img/video-camera.png" alt="video-camera"><a href="#">  Vé xem phim</a></p>
+                    <p><img src="img/car.png" alt="car"><a href="#">   Bảo hiểm Ô tô</a></p>
+                    <p><img src="img/airplane.png" alt="airplane"><a href="#">  Vé máy bay</a></p>
+                    <p><img src="img/wallet.png" alt=""><a href="#">  Ví nhân ái</a></p>
+                    <p><img src="img/money-bag.png" alt=""><a href="#">  Túi thần tài</a></p>
+                    <p> <img src="img/smartphone.png" alt=""><a href="#">  Ví trả sau</a></p>
+                    <p><img src="img/money-bag (1).png" alt=""><a href="#">  Vay nhanh</a></p>
+                    <p><img src="img/percentage.png" alt=""><a href="#">  Trả Góp Apple</a></p>
+
             </div>
             <div class="cskh">
                 <h5>Chăm sóc khách hàng</h5>
@@ -764,11 +835,11 @@
                 <p>Hotline: <a href="#">1900 5454 41</a> (Phí 1.000đ/phút)</p>
                 <p>Email: <a href="#">hotro@momo.vn</a></p>
                 <p>Tổng đài gọi ra: <a href="#">028.7306.5555</a> - <a href="#">028.9999.5555</a> - <a href="#">028.5555.5555</a>, các đầu số di động Brandname MoMo</p>
-                <p><button><img style="width: 20%;" src="img/man hinh.jpg" alt=""> hướng dẫn trợ giúp trên ứng dụng momo</button></p>
+                <p><button><img style="width: 10%;" src="img/man hinh.jpg" alt=""> hướng dẫn trợ giúp trên ứng dụng momo</button></p>
                 <h5>Hợp tác doanh nghiệp</h5>
                 <p>Hotline: <a href="#">1900 636 652  (Phí 1.000đ/phút)</a></p>
                 <p>Email: <a href="#">merchant.care@momo.vn</a></p>
-                <p>Website: <a href="#">business.momo.vn</a></p><p><button><img style="width: 20%;" src="tay.jpg" alt=""> Hợp tác doanh nghiệp
+                <p>Website: <a href="#"></a><p><button><img style="width: 10%;" src="img/tay.jpg" alt=""> Hợp tác doanh nghiệp
                     Đăng ký hợp tác
                     </button></p>
             </div>
@@ -778,6 +849,7 @@
                 <a href="#"><img src="img/linkedin.png" alt=""></a>
                 <a href="#"><img src="img/youtube (1).png" alt=""></a>
                 <h5>Tải ứng dụng trên điện thoại</h5>
+           
                 <div class="qr-download-container">
                     <img src="img/qr.jpg" alt="QR Code" class="qr-code">
                     <div class="app-downloads">
@@ -791,16 +863,16 @@
                     </div>
                 
                 <p>Được chứng nhận bởi:</p>
-                <a href="#"><img style="width: 100px;height: auto;" src="img/logo-da-dang-ky-bo-cong-thuong-mau-do.jpg" alt="Chứng nhận"></a>
+                <a href="#"><img style="width: 100px;height: auto;" src="img/logo-da-dang-ky-bo-cong-thuong-mau-do-2.png" alt="Chứng nhận"></a>
             </div>
         </div>
         <div class="footer-bottom">
-            <img style="width: 50px; height: auto; margin-left: 150px;" src="img/logo.png" style="border-radius: 50%;">
-            <div class="chucuoi">
+            <img style="width: 40px; height: auto; margin-left: -2  10px;" src="img/logo.png" style="border-radius: 50%;">
+            <div class="chucuoi1">
                 <b>CÔNG TY CỔ PHẦN DỊCH VỤ DI ĐỘNG TRỰC TUYẾN</b><br>
-                Địa chỉ: Lầu 6, Toà nhà Phú Mỹ Hưng, số 8 Hoàng Văn Thái, P. Tân Phú, Q. 7, Thành phố Hồ Chí Minh
+               Địa chỉ: Lầu 6, Toà nhà Phú Mỹ Hưng, số 8 Hoàng Văn Thái, P. Tân Phú, Q. 7, Thành phố Hồ Chí Minh 
             </div>
-            <div style="margin-right: 220px;">©Copyright M.Service 2024</div>
+            <div class="chucuoi">©Copyright M.Service 2024</div>
         </div>
     </footer>
     

@@ -52,6 +52,8 @@ function showContent(contentId) {
 
     // Hiển thị nội dung tương ứng với nút đã bấm
     var contentToShow = document.getElementById(contentId);
-    contentToShow.classList.add('active');
+    contentToShow.classList.add('active');  
 }
+  
+    
 

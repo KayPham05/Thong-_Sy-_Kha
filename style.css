@@ -84,6 +84,7 @@ body {
 header {
     display: flex;
     padding: 20px;
+    justify-content: center;
     background-color: #fff;
 }
 
@@ -343,8 +344,15 @@ nav ul li a {
         margin-bottom: 20px;
     }
 }
+/* ===============================saicanh */
+.sai{
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
 /* phan duoi*/
 .chon {
+    margin-top: 100px;
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: white;
@@ -352,18 +360,15 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items:center ;
 }
 
 .nut h4 {
-    font-size: 20px;
-}
-
-.nut {
     display: flex;
-    flex-direction: row;
-    justify-content: center; /* Đưa các nút vào giữa */
-    margin-bottom: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
 }
 
 .nut button {
@@ -374,9 +379,20 @@ nav ul li a {
     cursor: pointer;
 }
 
-.cc {
+.cc  {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
     color: #000000;
-    
+    width: 900px;
+    gap: 20px; 
+}
+ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .content {
@@ -387,86 +403,110 @@ nav ul li a {
 .content ul {
     margin-left: 0  ;
     flex: 1;
-    padding-right: 20px; /* Khoảng cách giữa văn bản và hình ảnh */
+    padding-right: 20px; 
 }
 
 
 .content.active {
     display: flex; /* Hiển thị nội dung khi nút được bấm */
 }
-
+/* ==================== */
 footer {
     background-color: #171717;
     color: #8b8b8b;
     font-family: Arial, sans-serif;
-    font-size: 15px;
+    font-size: 10px;
 }
 
 .footer-container {
     display: flex;
+    justify-content: center;            
     margin-right: 10px;
-    margin: 0 auto;
-    margin-left: 150px;
+    margin-left: 20px;
     margin-bottom: 20px;
 }
 .footer-container h5 {
     color: #d9d7d7;
     margin-bottom: 15px;
-    font-size: 16px;
+    font-size: 15px;
+    margin-left: 20px;
+    white-space: nowrap;
 }
-.footer-container ul li {
-    
-    list-style: none;
-    padding: 0;
-    padding-bottom: 15px;
-    text-align: left;
-    max-width: 250px;
+.vechungtoi{
 
+    width: 10px;
+}
+.footer-container p img{
+    width: 20px;
+}
+.dichvunoibat p  {
+    word-spacing: normal;
+    line-height: normal;
+    white-space: nowrap;    
+     display: flex;
+    flex-direction: row     ;
+    align-items: center; 
+    margin-bottom: 10px;
 }
 a{
     color: #8b8b8b;
     text-decoration: none;
     transition: color 0.2s ease;
 }
-footer .cskh a {
+footer .cskh a {        
     color: #d4d6d4;
     text-decoration: none;
     transition: color 0.2s ease;
 }
-footer a:hover{
-    color: white;
+.cskh{  
+    padding-left: 110px;
+   
+}
+.cskh p button{
+    width: 200px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.ketnoi img {
-    width: 50px;
+footer a:hover{ 
+    color: white;
+}
+.vechungtoi{
+    width: 250px;
+}
+.ketnoi a img {
+    width: 40px;
     max-width: 100px;
     margin-bottom: 10px;
 }
+.ketnoi{
+    padding-right: 45px;
+}
 .dichvunoibat li img{
-   width: 30px;
+   width: 20px;
    height: auto;
 }
 .dichvunoibat{
-    justify-content: center;
-    margin-right: 90px;
+    width: 150px;
+    margin-left: 100px;
 }
 .footer-bottom {
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     background-color: #262626;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
 
 }
-.footer-bottom .chucuoi{
+.footer-bottom .chucuoi1{
     margin-left: 10px;
+  
 }
-footer h5 {
-    margin-left: 20px;
+.footer-bottom .chucuoi{
+    margin-left: 110px;
 }
 .ketnoi a{
-    padding-left: 20px;
-}
-footer ul {
     padding-left: 20px;
 }
 footer p{
@@ -489,25 +529,25 @@ margin-right: 50px;
 }
 .qr-download-container {
     display: flex;
-    align-items: center; /* Căn giữa theo chiều dọc */
-    justify-content: center; /* Căn giữa cả nhóm QR và các nút */
-    gap: 20px; /* Khoảng cách giữa QR code và phần tải ứng dụng */
+    align-items: center;
+    justify-content: center; 
+    gap: 10px; 
 }
 
 .qr-code {
-    margin-left: 200px;
-    width: 200px; /* Kích thước QR code */
-    height: auto; /* Giữ nguyên tỷ lệ */
+    margin-left: 20px;
+    width: 100px; 
+    height: auto; 
 }
 
 .app-downloads {
     display: flex;
-    flex-direction: column; /* Đặt các nút tải ứng dụng thành một cột */
-    gap: 10px; /* Khoảng cách giữa hai nút */
+    flex-direction: column; 
+    gap: 10px; 
 }
 
-.qr-download-container {
-    width: 100px; /* Đặt kích thước của các nút tải */
+.qr-download-container a img {
+    width: 40px; 
     height: auto;
 }
 
@@ -561,9 +601,15 @@ margin-right: 50px;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+<<<<<<< HEAD
     width: 80%; /* Giảm chiều rộng xuống 80% */
     margin: 0 auto; /* Căn giữa container */
     height: auto; /* Đặt chiều cao cố định cho toàn bộ card */
+=======
+    width: 80%; 
+    margin: 0 auto;
+    height: 400px; 
+>>>>>>> 9875eaac742b583b4d31560ac8e7cb1bf81b8fa3
 }
 
 .promo-card {
