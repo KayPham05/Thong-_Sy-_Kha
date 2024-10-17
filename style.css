@@ -601,15 +601,9 @@ margin-right: 50px;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-<<<<<<< HEAD
     width: 80%; /* Giảm chiều rộng xuống 80% */
     margin: 0 auto; /* Căn giữa container */
     height: auto; /* Đặt chiều cao cố định cho toàn bộ card */
-=======
-    width: 80%; 
-    margin: 0 auto;
-    height: 400px; 
->>>>>>> 9875eaac742b583b4d31560ac8e7cb1bf81b8fa3
 }
 
 .promo-card {
@@ -1129,3 +1123,42 @@ margin-right: 50px;
     width: 100%;
     height: 100%;
 }
+
+.milestone-table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .milestone-row {
+    display: table-row;
+    border-bottom: 1px solid #ddd; /* Optional: adds a border between rows */
+  }
+  
+  .milestone-col {
+    display: table-cell;
+    padding: 10px;
+    vertical-align: top;
+    text-align: left;
+    border:#000 1px solid;
+  }
+  
+  .milestone {
+    font-weight: bold;
+    color: #ff4081; /* Optional: color to match icon */
+  }
+  
+  .task {
+    font-size: 16px;
+  }
+  
+  .reward {
+    font-size: 16px;
+    color: #ff9800; /* Optional: color for the reward column */
+  }
+  
+  .milestone-col strong {
+    font-weight: bold;
+    color: black;
+  }
+  
