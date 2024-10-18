@@ -221,37 +221,56 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    width: 100%;
 }
 .tabs {
     display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 10px;
+    justify-content: flex-start; /* Đảm bảo các tab bắt đầu từ phía trái */
+    gap: 10px; /* Khoảng cách giữa các tab */
     padding: 10px 0;
-    margin: 0 20px;
+    margin: 0 40px; /* Điều chỉnh margin nếu cần */
     overflow: hidden;
     width: 80%;
+    scroll-behavior: smooth;
 }
+
 .tab-item {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 20px;
-    width: 120px;
+    padding: 8px; /* Giảm padding để thu nhỏ */
+    width: 80px; /* Giảm chiều rộng tab */
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     flex: 0 0 auto;
 }
-.tab-item i {
-    font-size: 24px;
-    color: #e6007e;
-    margin-bottom: 10px;
+.tab-item.active {
+    background-color: #e60073;
+    color: white;
 }
+.tab-item:first-child {
+    margin-left: 0; /* Đảm bảo tab đầu tiên không bị thụt */
+}
+
+
+.tab-item i {
+    font-size: 18px; /* Giảm kích thước biểu tượng */
+    color: #e6007e;
+    margin-bottom: 5px; /* Giảm khoảng cách giữa icon và text */
+}
+
+
 .tab-item p {
     margin: 0;
     color: #333;
-    font-size: 14px;
+    font-size: 12px; /* Giảm kích thước chữ */
+}
+.tab-image {
+    max-width: 100%;
+    height: auto;
+}
+.tab-content {
+    margin-top: 20px;
 }
 .arrow {
     font-size: 24px;
@@ -302,7 +321,15 @@ nav ul li a {
     font-size: 16px;
 }
 
-
+.hidden-image {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+.hidden-image img {
+    width: 1000px;
+    height: 400px;
+}
 
 
 
@@ -311,7 +338,9 @@ nav ul li a {
     display: block;
     overflow: hidden;
     position: relative;
+    justify-content: center;
 }
+
 
 .list-images {
     display: flex;
