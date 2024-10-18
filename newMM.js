@@ -131,7 +131,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
 // Hàm tính toán khoảng thời gian
 function timeSince(date) {
     let now = new Date();

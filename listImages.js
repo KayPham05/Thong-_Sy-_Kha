@@ -67,21 +67,58 @@ function showContent(contentId) {
 }
 // thông mới làm
 function scrollTabs(direction) {
-    const tabs = document.getElementById('tabs');
-    const scrollAmount = 150;
-    tabs.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-}
-function openTab(tabId) {
-    // Ẩn tất cả các thẻ
-    const tabs = document.querySelectorAll('.tab-content');
-    tabs.forEach(tab => tab.classList.remove('active'));
-
-    // Hiển thị thẻ được chọn
-    document.getElementById(tabId).classList.add('active');
+    const tabsContainer = document.getElementById('tabs');
+    const scrollAmount = 150; // Đặt khoảng cách cuộn mỗi lần nhấn mũi tên
+    tabsContainer.scrollLeft += direction * scrollAmount;
 }
 
-// Hiển thị thẻ đầu tiên khi trang tải lên
-openTab('tab1');
+// Định nghĩa hàm tabClick
+function tabClick(tabName) {
+    // Lấy tất cả các tab content
+    const tabContents = document.querySelectorAll('.tab-content');
 
-    
+    // Ẩn tất cả các tab content
+    tabContents.forEach(content => {
+        content.style.display = 'none';
+    });
+
+    // Hiện tab content tương ứng với tab được nhấp
+    const activeTab = document.getElementById(tabName);
+    if (activeTab) {
+        activeTab.style.display = 'block';
+    }
+}
+
+// Khởi tạo tab đầu tiên được hiển thị
+document.addEventListener('DOMContentLoaded', () => {
+    tabClick('Momo đề xuất'); // Hiện tab mặc định
+});
+
+function toggleImage(id) {
+    var imageDiv = document.getElementById(id);
+    var allImages = document.querySelectorAll('.hidden-image');
+    allImages.forEach(function(img) {
+        if (img !== imageDiv) {
+            img.style.display = 'none';
+        }
+    });
+    if (imageDiv.style.display === "none" || imageDiv.style.display === "") {
+        imageDiv.style.display = "block";
+    } else {
+        imageDiv.style.display = "none";
+    }
+}
+    // cái này dùng để click vào sẽ đổi màu
+    const tabItems = document.querySelectorAll('.tab-item');
+
+    tabItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // Xóa 'active' từ tất cả các tab
+            tabItems.forEach(tab => tab.classList.remove('active'));
+
+            // Thêm 'active' vào tab được chọn
+            this.classList.add('active');
+        });
+    });
+
 

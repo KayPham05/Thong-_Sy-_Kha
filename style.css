@@ -221,37 +221,58 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    width: 100%;
 }
 .tabs {
     display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 10px;
+    justify-content: flex-start; /* Đảm bảo các tab bắt đầu từ phía trái */
+    gap: 10px; /* Khoảng cách giữa các tab */
     padding: 10px 0;
-    margin: 0 20px;
+    margin: 0 40px; /* Điều chỉnh margin nếu cần */
     overflow: hidden;
     width: 80%;
+    scroll-behavior: smooth;
 }
+
 .tab-item {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 20px;
-    width: 120px;
+    padding: 8px; /* Giảm padding để thu nhỏ */
+    width: 80px; /* Giảm chiều rộng tab */
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     flex: 0 0 auto;
+    cursor: pointer;
 }
+
+.tab-item.active {
+    background-color: #e60073;
+    color: white;
+}
+.tab-item:first-child {
+    margin-left: 0; /* Đảm bảo tab đầu tiên không bị thụt */
+}
+
+
 .tab-item i {
-    font-size: 24px;
+    font-size: 18px; /* Giảm kích thước biểu tượng */
     color: #e6007e;
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Giảm khoảng cách giữa icon và text */
 }
+
+
 .tab-item p {
     margin: 0;
     color: #333;
-    font-size: 14px;
+    font-size: 12px; /* Giảm kích thước chữ */
+}
+.tab-image {
+    max-width: 100%;
+    height: auto;
+}
+.tab-content {
+    margin-top: 20px;
 }
 .arrow {
     font-size: 24px;
@@ -302,7 +323,15 @@ nav ul li a {
     font-size: 16px;
 }
 
-
+.hidden-image {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+.hidden-image img {
+    width: 1000px;
+    height: 400px;
+}
 
 
 
@@ -311,7 +340,9 @@ nav ul li a {
     display: block;
     overflow: hidden;
     position: relative;
+    justify-content: center;
 }
+
 
 .list-images {
     display: flex;
@@ -920,7 +951,7 @@ margin-right: 50px;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Làm tối nền */
     display: none; /* Mặc định ẩn */
-    z-index: 999; /* Đảm bảo overlay nằm phía trên nội dung khác */
+    z-index: 1000; /* Đảm bảo overlay nằm phía trên nội dung khác */
 }
 
 .popup-overlay.show {
@@ -1352,3 +1383,55 @@ margin-right: 50px;
     color: black;
   }
   
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.event-ticket-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-ticket-table th, .event-ticket-table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.event-ticket-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.event-ticket-table td {
+    vertical-align: top;
+}
+
+.event-ticket-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.event-ticket-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.event-ticket-table td:last-child {
+    font-weight: bold;
+    color: #333;
+}
+
+.li-enven{
+    margin-left: 30px;
+}
