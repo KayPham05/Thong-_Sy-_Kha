@@ -5,17 +5,6 @@ body {
     padding: 0;
     background-color: #f5f5f5;
 }
-.container {
-    width: 300px;
-    padding: 20px;
-    background-color: #fff;
-}
-.container1 {
-    width: 100%;
-    padding: 20px;
-    background-color: #fff;
-}
-
 .center {
     text-align: center;
     /* padding: 20px 0; */
@@ -43,47 +32,38 @@ header p {
     font-size: 16px;
     margin: 5px 0 0;
 }
-.submenu1 {
-    display: none; /* Initially hidden */
-    position: absolute;
-    top: 100%; /* Dropdown below the parent menu item */
-    left: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
+.container {
+    background-color: white;
     border-radius: 10px;
-    z-index: 1000;
-    list-style: none;
-    padding: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-    width: 200px;
-}
-.menu > li:hover .submenu1 {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-}
-.submenu2 {
-    display: none; /* Initially hidden */
-    position: absolute;
-    top: 100%; /* Dropdown below the parent menu item */
-    left: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    z-index: 1000;
-    list-style: none;
-    padding: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    padding: 20px;
     width: 500px;
 }
-.menu > li:hover .submenu2 {
-    display: block;
-    opacity: 1;
-    visibility: visible;
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+td {
+    padding: 8px;
+    vertical-align: top;
+}
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.item i {
+    color: #ff00a7;
+    font-size: 24px;
+    margin-right: 10px;
+}
+.item h3 {
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+.item p {
+    color: #666;
+    margin: 0;
 }
 header {
     display: flex;
@@ -223,29 +203,77 @@ nav ul li a {
 
 
 /* Phần Giữa */
+.container1 {
+    text-align: center;
+    padding: 20px;
+}
+.center {
+    color: #e6007e;
+    font-size: 24px;
+    font-weight: bold;
+}
+.sub-center{
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.tabs-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
 .tabs {
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 20px;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 10px 0;
+    margin: 0 20px;
+    overflow: hidden;
+    width: 80%;
 }
-
-.tab {
-    padding: 10px 20px;
-    cursor: pointer;
-    color: rgb(212, 42, 135);
-    border-bottom: 3px solid transparent;
+.tab-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 120px;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 0 0 auto;
 }
-
-.tab.active {
-    border-bottom: 3px solid rgb(212, 42, 135);
-}
-
-.tab i {
-    display: block;
+.tab-item i {
     font-size: 24px;
-    margin-bottom: 5px;
+    color: #e6007e;
+    margin-bottom: 10px;
+}
+.tab-item p {
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+}
+.arrow {
+    font-size: 24px;
+    color: #e6007e;
+    cursor: pointer;
+}
+
+.nav-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.nav-item.active {
+    background-color: #e6007e;
+    color: #fff;
 }
 
 .services {

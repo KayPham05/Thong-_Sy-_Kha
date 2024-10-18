@@ -54,6 +54,23 @@ function showContent(contentId) {
     var contentToShow = document.getElementById(contentId);
     contentToShow.classList.add('active');  
 }
-  
+// thông mới làm
+function scrollTabs(direction) {
+    const tabs = document.getElementById('tabs');
+    const scrollAmount = 150;
+    tabs.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+}
+function openTab(tabId) {
+    // Ẩn tất cả các thẻ
+    const tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    // Hiển thị thẻ được chọn
+    document.getElementById(tabId).classList.add('active');
+}
+
+// Hiển thị thẻ đầu tiên khi trang tải lên
+openTab('tab1');
+
     
 
