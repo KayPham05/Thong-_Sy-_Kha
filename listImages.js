@@ -43,6 +43,17 @@ btnLeft.onclick = function () {
 reloadSlider();
 // thong làm
 //=====cua sy=========
+document.getElementById("myButton").onclick = function() {
+    this.classList.add("underline"); // Thêm class để gạch chân
+}
+$(document).ready(function(){
+    $("#hide").click(function(){
+      $("p").hide();
+    });
+    $("#show").click(function(){
+      $("p").show();
+    });
+  });
 function show(contentId){
     //an noi dung
     var content = document.getElementsByClassName('noi-dung');

@@ -485,6 +485,94 @@ nav ul li a {
     }
     
 }
+/* sieuungdung */
+.sieuungdungmomo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sieuungdungmomo ul{
+    list-style-type: none;
+}
+.sieuungdungmomo li{
+    padding: 50px 0;
+    width: 60%;
+    margin: 0;
+}
+.sieuungdungmomo .canngang{
+    display: flex;
+    flex-direction: row;
+}
+.hong{
+    color:#d42a87 ;
+}
+/* 3buoc */
+.babuoc{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding-bottom: 50px;
+}
+.muitenchinh{
+    padding: 20px 0;
+    display: flex;
+    gap: 30px;
+}
+.muiten{
+    background-color: rgb(246, 123, 203)    ;
+    padding: 10px 10px;
+    border-radius: 20px;
+    color: white;
+}
+.trungtam3buoc{
+    display: flex;
+    width: 500px;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center ;
+    padding-bottom: 50px;
+}
+.trungtam3buoc li{
+    margin: 10px;
+}
+/* song thong minh cung momo */
+table {
+    width: 70%;
+    border-collapse: separate; /* Sử dụng 'separate' để có thể dùng border-spacing */
+    border-spacing: 15px; /* Tăng khoảng cách giữa các cột */
+}
+
+
+.songthongminh{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #d42a87;
+}
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 3 cột */
+    gap: 20px; /* Khoảng cách giữa các ảnh */
+}
+
+.image-item {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px; /* Làm tròn các góc */
+    background-color: #fff;
+}
+
+.image-item img {
+    width: 100%;
+    border-radius: 8px; /* Làm tròn các góc của ảnh */
+}
+
+
 /* ===============================saicanh */
 .saicanh{
     background-color: #fff9fb;
@@ -513,6 +601,9 @@ nav ul li a {
     background-color: white;
     border: none;
 border-radius: 20px;
+}
+.noi-dung input{
+    width: 60%;
 }
 .nutt button span {
     font-weight: bold;
@@ -618,13 +709,17 @@ ul {
     display: flex; /* Hiển thị nội dung khi nút được bấm */
 }
 /* ==================== */
+
 footer {
     background-color: #171717;
     color: #8b8b8b;
     font-family: Arial, sans-serif;
     font-size: 10px;
+    padding-top: 20px;
 }
-
+button:active {
+    text-decoration: underline;
+}
 .footer-container {
     display: flex;
     justify-content: center;            
@@ -712,6 +807,10 @@ footer a:hover{
 }
 .footer-bottom .chucuoi{
     margin-left: 110px;
+}
+footer a{
+    text-decoration: none;
+    color: #7f7f7f;
 }
 .ketnoi a{
     padding-left: 20px;
