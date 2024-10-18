@@ -456,14 +456,81 @@ nav ul li a {
     
 }
 /* ===============================saicanh */
-.sai{
-    background-color: #ffffff;
+.saicanh{
+    background-color: #fff9fb;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 70px;
 }
-/* phan duoi*/
+.noi-dung{
+    display:;
+}
+.noi-dung .active2{
+    display: contents;
+}
+.nutt{
+    padding: 2px;
+    background-color: white;
+    margin-top: -100px;
+    margin-left: -470px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 2px solid #ddd; 
+}
+.nutt button{
+    background-color: white;
+    border: none;
+border-radius: 20px;
+}
+.nutt button span {
+    font-weight: bold;
+    display: block; /* Đảm bảo mỗi thẻ <span> hiển thị trên dòng riêng */
+}
+.noi-dung{
+    width: 800px;
+    height: auto;
+    background-color: white;
+    margin-left: -70px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 10px;
+}
+.thongtin{
+    display: flex;
+    flex-direction: row;
+}
+.thongtin img{
+    width: 70px;
+    height: 70px;
+}
+.noi-dung button{
+    border: none;
+    background-color: white;
+    font-size: 20px;
+
+}
+.bangtt div{
+   display: flex;
+   /* justify-content: center;
+   align-items: center; */
+   flex-direction: column;
+   
+}
+.bangtt{
+    display: flex;
+}
+.thongtin span {
+    width: 300px;             /* Chiều rộng cố định */
+    height: 100px;            /* Chiều cao cố định */
+    padding: 10px;
+    margin: 10px 0;
+}
+/* ----------------- */
 .chon {
-    margin-top: 100px;
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: white;
@@ -507,8 +574,7 @@ ul {
 }
 
 .content {
-    display: none; /* Mặc định ẩn */
-    flex-direction: row; /* Căn chỉnh theo hàng ngang */
+    display: none; 
 }
 
 .content ul {
@@ -712,9 +778,15 @@ margin-right: 50px;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+<<<<<<< HEAD
     width: 80%; 
     margin: 0 auto;
     height: 400px; 
+=======
+    width: 80%; /* Giảm chiều rộng xuống 80% */
+    margin: 0 auto; /* Căn giữa container */
+    height: auto; /* Đặt chiều cao cố định cho toàn bộ card */
+>>>>>>> fbfbf204944a8bf6b4f96f8529b9b92e203b573a
 }
 
 .promo-card {
@@ -1028,6 +1100,8 @@ margin-right: 50px;
     font-size: 30px;
     cursor: pointer;
 }
+<<<<<<< HEAD
+=======
 
 /* CSS cho nền mờ và popup mới */
 .popup-overlay-new {
@@ -1234,3 +1308,43 @@ margin-right: 50px;
     width: 100%;
     height: 100%;
 }
+
+.milestone-table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .milestone-row {
+    display: table-row;
+    border-bottom: 1px solid #ddd; /* Optional: adds a border between rows */
+  }
+  
+  .milestone-col {
+    display: table-cell;
+    padding: 10px;
+    vertical-align: top;
+    text-align: left;
+    border:#000 1px solid;
+  }
+  
+  .milestone {
+    font-weight: bold;
+    color: #ff4081; /* Optional: color to match icon */
+  }
+  
+  .task {
+    font-size: 16px;
+  }
+  
+  .reward {
+    font-size: 16px;
+    color: #ff9800; /* Optional: color for the reward column */
+  }
+  
+  .milestone-col strong {
+    font-weight: bold;
+    color: black;
+  }
+>>>>>>> 2e588f1eafb6ee18da1106b3332967ac70f94cc9
+  
