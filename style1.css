@@ -221,14 +221,12 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     width: 100%;
-  
 }
 .tabs {
     display: flex;
-    justify-content: flex-start; /* Đảm bảo các tab bắt đầu từ phía trái */
+    justify-content: center; /* Đảm bảo các tab bắt đầu từ phía trái */
     gap: 10px; /* Khoảng cách giữa các tab */
     padding: 10px 0;
-    margin: 0 40px; /* Điều chỉnh margin nếu cần */
     overflow: hidden;
     width: 80%;
     scroll-behavior: smooth;
@@ -243,7 +241,9 @@ nav ul li a {
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     flex: 0 0 auto;
+    cursor: pointer;
 }
+
 .tab-item.active {
     background-color: #e60073;
     color: white;
@@ -461,7 +461,6 @@ nav ul li a {
     display: flex;
     opacity: 1;
 }
-
 .card {
     background-color: #fff;
     border-radius: 10px;
@@ -498,9 +497,9 @@ nav ul li a {
     flex-direction: column;
     padding-bottom: 70px;
 }
-/* .noi-dung{
-    display:;
-} */
+.noi-dung{
+    display:flex;
+}
 .noi-dung .active2{
     display: contents;
 }
@@ -664,9 +663,6 @@ a{
     text-decoration: none;
     transition: color 0.2s ease;
 }
-.a{
-    color: white;
-}
 footer .cskh a {        
     color: #d4d6d4;
     text-decoration: none;
@@ -766,12 +762,12 @@ margin-right: 50px;
 }
 
   /* KHA LÀM */
-.containerNMM {
+  .containerNMM {
     width: 80%;
     margin: 0 auto;
   } 
   
-  .menuNew ul {
+.menuNew ul {
     display: flex;
     list-style: none;
     justify-content: center;
@@ -783,19 +779,18 @@ margin-right: 50px;
     font-size: 20px;
   }
   
-  .menuNew ul li {
+.menuNew ul li {
     padding: 10px 20px;
     cursor: pointer;
   }
-  
-  .menuNew a:hover {
+
+.menuNew a:hover {
     color: rgb(212, 42, 135); /* Màu khi di chuột */
 }
  .active-link{
     border-bottom: 2px solid rgb(212, 42, 135);
     color: rgb(212, 42, 135);
   }
-  
   
   #xemthem {
     display: block;
@@ -812,6 +807,10 @@ margin-right: 50px;
     background-color: rgb(212, 42, 135);
 }
 
+.containerNMM {
+    width: 80%;
+    margin: 0 auto;
+}
 
 .cards-container {
     display: none;
@@ -823,11 +822,9 @@ margin-right: 50px;
     height: 400px; 
     height: auto; /* Đặt chiều cao cố định cho toàn bộ card */
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease; /* Thời gian chuyển đổi là 0.5s */
 }
-.cards-container a{
-    color: white;
-}
+
 .promo-card {
     width: 245px;
     border-radius: 12px;
@@ -1383,8 +1380,8 @@ margin-right: 50px;
     font-weight: bold;
     color: black;
   }
-
-  .event-ticket-table {
+  
+.event-ticket-table {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
@@ -1463,26 +1460,4 @@ margin-right: 50px;
     padding-bottom: 12px;
     background-color: #4CAF50;
     color: white;
-}
-.button-container {
-    text-align: center; /* Căn giữa theo chiều ngang */
-    margin-top: 20px; /* Tùy chỉnh khoảng cách trên */
-}
-
-.body-button {
-    background-color: rgb(212, 42, 135);
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-weight: bold;
-    margin: 0 10px;
-    font-size: 17px;
-    display: inline-block; /* Đảm bảo button không chiếm 100% chiều rộng */
-}
-.image-TD {
-    width: 100%;
-    align-items: center;
 }
