@@ -1,0 +1,70 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tab Color Change</title>
+    <style>
+        /* CSS cơ bản */
+        .tabs {
+            display: flex;
+        }
+
+        .tab-item {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            background-color: #fff;
+            color: #000;
+        }
+
+        .tab-item.active {
+            background-color: #e60073;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tabs-container">
+        <div class="tabs" id="tabs">
+            <div class="tab-item" onclick="tabClick('Momo đề xuất')">Momo đề xuất</div>
+            <div class="tab-item" onclick="tabClick('Tài chính - Bảo hiểm')">Tài chính - Bảo hiểm</div>
+            <div class="tab-item" onclick="tabClick('Mua vé xem phim')">Mua vé xem phim</div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript để xử lý click và thay đổi màu
+        const tabItems = document.querySelectorAll('.tab-item');
+
+        tabItems.forEach(item => {
+            item.addEventListener('click', function() {
+
+
+
+                // Xóa 'active' từ tất cả các tab
+                tabItems.forEach(tab => tab.classList.remove('active'));
+
+                // Thêm 'active' vào tab được chọn
+                this.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+<<<<<<< HEAD
+    width: 80%; 
+    margin: 0 auto;
+    height: 400px; 
+=======
+    width: 80%; /* Giảm chiều rộng xuống 80% */
+    margin: 0 auto; /* Căn giữa container */
+    height: auto; /* Đặt chiều cao cố định cho toàn bộ card */
+=======
+>>>>>>> 3829c2475b1a42af8ecf53d2c090b1d8fc055667
