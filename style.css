@@ -575,7 +575,7 @@ padding-bottom: 50px;
     border-collapse: separate; /* Sử dụng 'separate' để có thể dùng border-spacing */
     border-spacing: 10px; /* Tăng khoảng cách giữa các cột */
 }
-.bangthongminh button{
+.bangthongminh a{
     border: none;
     color:#d42a87 ;
 }
@@ -633,6 +633,7 @@ padding-bottom: 50px;
     border: none;
 border-radius: 20px;
 }
+
 .nutt button span {
     font-weight: bold;
     display: block; /* Đảm bảo mỗi thẻ <span> hiển thị trên dòng riêng */
