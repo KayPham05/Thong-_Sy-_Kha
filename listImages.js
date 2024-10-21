@@ -56,6 +56,26 @@ function showContent(contentId) {
     var contentToShow = document.getElementById(contentId);
     contentToShow.classList.add('active');  
 }
+
+function hiennd(n) {
+    // Lấy tất cả các phần tử có class "nd-content" và ẩn chúng
+    var contents = document.querySelectorAll('.nd-content');
+    contents.forEach(function(content) {
+        content.classList.remove('active'); // Ẩn tất cả nội dung
+    });
+
+    // Hiển thị phần tử có id tương ứng với tham số n
+    var selectedContent = document.getElementById(n);
+    selectedContent.classList.add('active'); // Hiển thị phần tử đó
+}
+
+
+
+
+
+
+
+
 // thông mới làm
 function scrollTabs(direction) {
     const tabsContainer = document.getElementById('tabs');
