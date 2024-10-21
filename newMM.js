@@ -103,6 +103,34 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const menuLinks = document.querySelectorAll('.menuNew a');
+    const containers = document.querySelectorAll('.cards-container');
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Ngăn chặn hành động mặc định của thẻ <a>
+
+            // Xóa lớp 'activenew' khỏi tất cả các container
+            containers.forEach(container => {
+                container.classList.remove('activenew');
+            });
+
+            // Xóa lớp 'active-link' khỏi tất cả các menu links
+            menuLinks.forEach(link => {
+                link.classList.remove('active-link');
+            });
+
+            // Thêm lớp 'activenew' vào container được chọn
+            const targetId = this.getAttribute('data-target');
+            document.getElementById(targetId).classList.add('activenew');
+
+            // Thêm lớp 'active-link' vào mục menu được chọn
+            this.classList.add('active-link');
+        });
+    });
+});
+
 // Hàm tính toán khoảng thời gian
 function timeSince(date) {
     let now = new Date();
