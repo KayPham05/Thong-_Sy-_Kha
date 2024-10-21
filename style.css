@@ -44,11 +44,11 @@ header p {
     opacity:1;
 }
 
-
-table {
+.table-submenu {
     width: 100%;
     border-collapse: collapse;
 }
+
 td {
     padding: 8px;
     vertical-align: top;
@@ -452,8 +452,6 @@ nav ul li a {
     font-size: 14px;
     line-height: 1.6;
 }
-
-Tab styles
 .active-tab {
     border-bottom: 4px solid rgb(212, 42, 135);/* Gạch chân dưới tab đang hoạt động */
     text-decoration: none; /* Loại bỏ gạch chân */
@@ -554,7 +552,7 @@ padding-bottom: 50px;
 table {
     width: 70%;
     border-collapse: separate; /* Sử dụng 'separate' để có thể dùng border-spacing */
-    border-spacing: 15px; /* Tăng khoảng cách giữa các cột */
+    border-spacing: 10px; /* Tăng khoảng cách giữa các cột */
 }
 
 
