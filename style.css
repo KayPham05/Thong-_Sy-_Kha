@@ -497,8 +497,6 @@ Tab styles
     }
     
 }
-<<<<<<< HEAD
-=======
 /* sieuungdung */
 .sieuungdungmomo{
     display: flex;
@@ -586,7 +584,6 @@ table {
     border-radius: 8px; /* Làm tròn các góc của ảnh */
 }
 
->>>>>>> 3829c2475b1a42af8ecf53d2c090b1d8fc055667
 /* ===============================saicanh */
 .saicanh{
     background-color: #fff9fb;
@@ -596,13 +593,9 @@ table {
     flex-direction: column;
     padding-bottom: 70px;
 }
-<<<<<<< HEAD
-
-=======
 /* .noi-dung{
     display:;
 } */
->>>>>>> refs/remotes/origin/main
 .noi-dung .active2{
     display: contents;
 }
@@ -920,11 +913,6 @@ margin-right: 50px;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-<<<<<<< HEAD
-    width: 80%; /* Giảm chiều rộng xuống 80% */
-    margin: 0 auto; /* Căn giữa container */
-    height: auto; /* Đặt chiều cao cố định cho toàn bộ card */
-=======
     width: 80%; 
     margin: 0 auto;
     height: 400px; 
@@ -934,7 +922,6 @@ margin-right: 50px;
 }
 .cards-container a{
     color: white;
->>>>>>> 3829c2475b1a42af8ecf53d2c090b1d8fc055667
 }
 .promo-card {
     width: 245px;
@@ -1491,9 +1478,6 @@ margin-right: 50px;
     font-weight: bold;
     color: black;
   }
-<<<<<<< HEAD
-  
-=======
 
   .event-ticket-table {
     width: 100%;
@@ -1597,4 +1581,3 @@ margin-right: 50px;
     width: 100%;
     align-items: center;
 }
->>>>>>> 3829c2475b1a42af8ecf53d2c090b1d8fc055667
