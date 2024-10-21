@@ -495,30 +495,51 @@ nav ul li a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: ;
+}
+.phai{
+    margin-left: 20%;
+}
+.canngang2{
+    display: flex;
+    flex-direction:row;
+    margin-left: 10%;
+}
+.canngang20{
+    display: flex;
+    flex-direction: row;
+}
+.sieuungdungmomo ul img{
+    width: 100px;
+    height: auto;
 }
 .sieuungdungmomo ul{
     list-style-type: none;
 }
 .sieuungdungmomo li{
     padding: 50px 0;
-    width: 60%;
+    width: 30%;
     margin: 0;
 }
-.sieuungdungmomo .canngang{
+.sieuungdungmomo .canngang20{
     display: flex;
-    flex-direction: row;
+   
 }
 .hong{
     color:#d42a87 ;
 }
 /* 3buoc */
 .babuoc{
+    background-color: #fef1f9;
 display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
 padding-bottom: 50px;
 }
+
+
+
 .muitenchinh{
     padding: 20px 0;
     display: flex;
@@ -535,7 +556,7 @@ padding-bottom: 50px;
     width: 500px;
     gap: 10px;
     flex-direction: row;
-    justify-content: center;
+    /* justify-content: center; */
     align-items:center ;
     padding-bottom: 50px;
 }
@@ -543,12 +564,15 @@ padding-bottom: 50px;
     margin: 10px;
 }
 /* song thong minh cung momo */
-table {
+.bangthongminh {
     width: 70%;
     border-collapse: separate; /* Sử dụng 'separate' để có thể dùng border-spacing */
     border-spacing: 15px; /* Tăng khoảng cách giữa các cột */
 }
-
+.bangthongminh button{
+    border: none;
+    color:#d42a87 ;
+}
 
 .songthongminh{
     display: flex;
@@ -585,13 +609,7 @@ table {
     flex-direction: column;
     padding-bottom: 70px;
 }
-<<<<<<< HEAD
 
-=======
-/* .noi-dung{
-    display:;
-} */
->>>>>>> refs/remotes/origin/main
 .noi-dung .active2{
     display: contents;
 }

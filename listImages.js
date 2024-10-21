@@ -43,17 +43,8 @@ btnLeft.onclick = function () {
 reloadSlider();
 // thong làm
 //=====cua sy=========
-function show(contentId){
-    //an noi dung
-    var content = document.getElementsByClassName('noi-dung');
-    for(var i=0;i<content.length;i++){
-        content[i].classList.remove('active2');
-        //hienthi
-        var contentToShow= document.getElementById(contentId);
-        contentToShow.classList.add('active2');
-    }
 
-}
+
 function showContent(contentId) {
     // Ẩn tất cả các nội dung
     var contents = document.getElementsByClassName('content');
