@@ -68,8 +68,12 @@ function hiennd(n) {
     var selectedContent = document.getElementById(n);
     selectedContent.classList.add('active'); // Hiển thị phần tử đó
 }
-
-
+function openModal(){
+    document.getElementById('ndcon1').style.display = 'block';
+}
+function closeModal(){
+    document.getElementById('ndcon1').style.display='none';
+}
 
 
 

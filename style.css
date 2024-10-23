@@ -625,6 +625,47 @@ padding-bottom: 50px;
 .active{
     display: block;
 }
+.xanh{
+    color:#10b7ee;
+}
+.mo{
+ color: gray;
+}
+.ndcon {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.cangiua{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.noidungcon {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tạo hiệu ứng đổ bóng */
+    width: 1000px; /* Độ rộng của popup */
+    max-height: 80vh; /* Giới hạn chiều cao popup */
+    overflow-y: auto; /* Thêm tính năng cuộn khi nội dung dài */
+    position: relative; /* Đảm bảo nút close ở đúng vị trí */
+}
+
+.close {
+    color: red;
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
 /* ===============================saicanh */
 .saicanh{
     background-color: #fff9fb;
