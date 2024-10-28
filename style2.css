@@ -15,8 +15,6 @@ body {
 header {
     text-align: left;
     /* padding: 20px 0; */
-    position: fixed;
-    z-index: 1000;
     width: 100%;
     border-bottom: 1px solid #ddd;
 }
@@ -353,8 +351,20 @@ nav ul li a {
     overflow: hidden;
     position: relative;
     justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
+.slide-show::after {
+    content: "";
+    position: absolute;
+    bottom: -40px; /* Tăng độ dịch xuống để đường cong rõ ràng hơn */
+    left: 0;
+    width: 100%;
+    height: 80px; /* Tăng chiều cao để tạo độ cong lớn hơn */
+    background-color: white; /* Màu nền dưới đường cong */
+    border-radius: 100% 100% 0 0; /* Tăng border-radius để tạo độ cong rõ hơn */
+}
 
 .list-images {
     display: flex;
@@ -363,6 +373,7 @@ nav ul li a {
 
 .list-images img {
     width: 100%;
+    margin: 3px;
 }
 
 .btn-left, .btn-right {
@@ -530,9 +541,6 @@ nav ul li a {
     flex: 1;
     margin: 10px;
     
-}
-.sieuungdungmomo ul img{
-  
 }
 .sieuungdungmomo ul{
     list-style-type: none;
@@ -1317,6 +1325,264 @@ margin-right: 50px;
 }
 
 /* CSS cho nền mờ và popup mới */
+
+.milestone-table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .milestone-row {
+    display: table-row;
+    border-bottom: 1px solid #ddd; /* Optional: adds a border between rows */
+  }
+  
+  .milestone-col {
+    display: table-cell;
+    padding: 10px;
+    vertical-align: top;
+    text-align: left;
+    border:#000 1px solid;
+  }
+  
+  .milestone {
+    font-weight: bold;
+    color: #ff4081; /* Optional: color to match icon */
+  }
+  
+  .task {
+    font-size: 16px;
+  }
+  
+  .reward {
+    font-size: 16px;
+    color: #ff9800; /* Optional: color for the reward column */
+  }
+  
+  .milestone-col strong {
+    font-weight: bold;
+    color: black;
+  }
+
+  .event-ticket-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-ticket-table th, .event-ticket-table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.event-ticket-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.event-ticket-table td {
+    vertical-align: top;
+}
+
+.event-ticket-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.event-ticket-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.event-ticket-table td:last-child {
+    font-weight: bold;
+    color: #333;
+}
+
+.li-enven{
+    margin-left: 30px;
+}
+
+.custom-reward-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+.custom-reward-table th, .custom-reward-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.custom-reward-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.custom-reward-table td {
+    font-size: 14px;
+}
+
+.custom-reward-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.custom-reward-table tr:hover {
+    background-color: #ddd;
+}
+
+.custom-reward-table th, .custom-reward-table td {
+    text-align: left;
+}
+
+.custom-reward-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #4CAF50;
+    color: white;
+}
+.button-container {
+    text-align: center; /* Căn giữa theo chiều ngang */
+    margin-top: 20px; /* Tùy chỉnh khoảng cách trên */
+}
+
+.body-button {
+    background-color: rgb(212, 42, 135);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    margin: 0 10px;
+    font-size: 17px;
+    display: inline-block; /* Đảm bảo button không chiếm 100% chiều rộng */
+}
+.image-TD {
+    width: 100%;
+    align-items: center;
+}
+
+
+
+/* Trang Hai chuyển tiền */
+.menuChuyenTien {
+    background-color: #f0f0f0;
+    border-top: 1px solid #ddd;
+    width: 100%;       /* Cho menu full width */
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    position: fixed;    /* Giữ menu cố định */
+    z-index: 1000;      /* Đảm bảo menu nằm trên các phần tử khác */
+    transition: top 0.1s ease; /* Hiệu ứng chuyển động cho thuộc tính top */
+    margin-bottom: 30px;
+}
+.navbar {
+    width: 70%;
+}
+
+.menuChuyenTien .navbar a {
+    display: inline-block;
+    color: #555;
+    padding: 8px 0px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menuChuyenTien .navbar span {
+    color: #969696;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.menuChuyenTien .navbar a:hover {
+    color: rgb(212, 42, 135);
+    font-size: 15px;
+    font-weight: bold;
+}
+.menuChuyenTien .navbar a.active-momo {
+    color: rgb(212, 42, 135);
+    font-size: 15px;
+    font-weight: bold;
+}
+/* //Phan chuyển tiền mômp */
+.momo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 58%;
+    margin: auto;
+}
+
+.momo-content {
+    max-width: 50%;
+}
+
+.momo-content h2 {
+    color: #d42887;
+    font-size: 37px;
+    margin-bottom: 10px;
+}
+
+.momo-content p {
+    color: #555555;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.features {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.features li {
+    color: #d42887;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.open-popup-btn {
+    background-color: #d42887;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.button-location {
+    background-color: #f0f0f0;
+    border-top: 1px solid #ddd;
+    width: 100%;       /* Cho menu full width */
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    position: fixed;    /* Giữ menu cố định */
+    z-index: 1000;      /* Đảm bảo menu nằm trên các phần tử khác */
+    transition: bottom 0.3s ease; /* Hiệu ứng chuyển động cho thuộc tính top */
+}
+
+.open-popup-btn:hover {
+    background-color: #c01776;
+}
+
+.momo-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
 .popup-overlay-new {
     position: fixed;
     top: 0;
@@ -1341,6 +1607,22 @@ margin-right: 50px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     height: 70%;
+}
+
+@keyframes modal-show-new {
+    from {
+        bottom: -100px; /* Bắt đầu ở dưới màn hình */
+        opacity: 0; /* Bắt đầu với độ trong suốt 0 */
+    }
+    to {
+        top: -50%; /* Cuối cùng đưa popup về giữa màn hình */
+        opacity: 1; /* Cuối cùng là độ trong suốt 1 */
+    }
+}
+
+.popup-modal-new.show {
+    display: block;
+    animation: modal-show-new 0.6s forwards;
 }
 
 .popup-content-new {
@@ -1522,179 +1804,126 @@ margin-right: 50px;
     height: 100%;
 }
 
-.milestone-table {
-    display: table;
+/* Hướng dẩn chuyển tiền  */
+/* Container tổng */
+.guide-container {
     width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .milestone-row {
-    display: table-row;
-    border-bottom: 1px solid #ddd; /* Optional: adds a border between rows */
-  }
-  
-  .milestone-col {
-    display: table-cell;
-    padding: 10px;
-    vertical-align: top;
-    text-align: left;
-    border:#000 1px solid;
-  }
-  
-  .milestone {
-    font-weight: bold;
-    color: #ff4081; /* Optional: color to match icon */
-  }
-  
-  .task {
-    font-size: 16px;
-  }
-  
-  .reward {
-    font-size: 16px;
-    color: #ff9800; /* Optional: color for the reward column */
-  }
-  
-  .milestone-col strong {
-    font-weight: bold;
-    color: black;
-  }
-
-  .event-ticket-table {
-    width: 100%;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
-    border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.event-ticket-table th, .event-ticket-table td {
-    padding: 15px;
-    text-align: left;
-    border: 1px solid #ddd;
-}
-
-.event-ticket-table th {
-    background-color: #f5f5f5;
-    font-weight: bold;
-}
-
-.event-ticket-table td {
-    vertical-align: top;
-}
-
-.event-ticket-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.event-ticket-table tr:hover {
-    background-color: #f1f1f1;
-}
-
-.event-ticket-table td:last-child {
-    font-weight: bold;
-    color: #333;
-}
-
-.li-enven{
-    margin-left: 30px;
-}
-
-.custom-reward-table {
-    width: 100%;
-    border-collapse: collapse;
+    padding: 20px;
+    text-align: center;
     font-family: Arial, sans-serif;
 }
 
-.custom-reward-table th, .custom-reward-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-}
-
-.custom-reward-table th {
-    background-color: #f2f2f2;
+.guide-title {
+    font-size: 24px;
     font-weight: bold;
+    color: #ff0099;
+    margin-bottom: 20px;
 }
 
-.custom-reward-table td {
-    font-size: 14px;
+/* Thanh điều hướng các bước */
+.guide-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
 }
 
-.custom-reward-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.custom-reward-table tr:hover {
-    background-color: #ddd;
-}
-
-.custom-reward-table th, .custom-reward-table td {
-    text-align: left;
-}
-
-.custom-reward-table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    background-color: #4CAF50;
-    color: white;
-}
-.button-container {
-    text-align: center; /* Căn giữa theo chiều ngang */
-    margin-top: 20px; /* Tùy chỉnh khoảng cách trên */
-}
-
-.body-button {
-    background-color: rgb(212, 42, 135);
-    color: white;
+.guide-nav-btn {
+    padding: 10px 20px;
+    background-color: #f9e3ef;
     border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #ff0099;
     cursor: pointer;
     transition: background-color 0.3s;
-    font-weight: bold;
-    margin: 0 10px;
-    font-size: 17px;
-    display: inline-block; /* Đảm bảo button không chiếm 100% chiều rộng */
 }
-.image-TD {
-    width: 100%;
+
+.guide-nav-btn.active {
+    background-color: #ff0099;
+    color: white;
+}
+
+.guide-nav-btn:hover {
+    background-color: #ff66b3;
+    color: white;
+}
+
+/* Nội dung chính */
+.guide-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.guide-image {
+    position: relative;
+    border-radius: 30px;
+    background-color: #333;
+    height: 520px;
+    width: 280px;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 
+.guide-image img {
+    width: 90%;
+    height: auto; /* Giữ tỷ lệ hình ảnh */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-/* Trang Hai chuyển tiền */
-.menuChuyenTien {
-    background-color: #f0f0f0;
-    padding-top: 50px;
-    border-top: 1px solid #ddd;
-    width: 100%;       /* Cho menu full width */
+.content-container {
     display: flex;
-    margin-top: 5px;   /* Tạo khoảng cách với menu trên */
-    justify-content: center;
-    font-size: xx-large;
-    z-index: 2000;
+    align-items: flex-start;
+    gap: 20px;
 }
-.navbar {
-    width: 65%;
+/* Phần hướng dẫn từng bước */
+.guide-content ol {
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px;
 }
-.menuChuyenTien .navbar a {
-    display: inline-block;
-    color: #555;
-    padding: 8px 0px;
-    text-decoration: none;
-    font-size: 14px;
-}
-.menuChuyenTien .navbar span {
-    color: #969696;
-    text-decoration: none;
-    font-size: 20px;
 
+.guide-content li {
+    cursor: pointer;
+    padding: 8px 0;
+    color: #333;
+    transition: color 0.3s ease;
 }
-.menuChuyenTien .navbar a:hover {
-    color: rgb(212, 42, 135);
-    font-size: 15px;
-    font-weight: bold;
+
+.guide-content li:hover {
+    color: #ff4d4f;
+}
+
+/* CSS cho nút mũi tên */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(47, 46, 46, 0.6);
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 100%;
+    transition: background-color 0.6s ease;
+}
+
+.nav-btn:hover {
+    background-color:  rgba(47, 46, 46, 0.6);
+}
+
+.prev-btn {
+    left: 15px;
+}
+
+.next-btn {
+    right: 15px;
 }
