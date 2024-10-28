@@ -44,6 +44,57 @@ reloadSlider();
 // thong làm
 //=====cua sy=========
 
+// 3buoc
+      document.addEventListener('DOMContentLoaded', function() {
+        // Lấy tất cả các phần tử có class là 'anhuongdan' và 'huondan'
+        const anhuongdans = document.querySelectorAll('.anhuongdan');
+        const huondans = document.querySelectorAll('.huondan');
+    
+        // Lặp qua từng phần tử trong 'anhuongdan'
+        anhuongdans.forEach((anhuongdan, index) => {
+            anhuongdan.addEventListener('click', function() {
+                // Ẩn tất cả các 'huondan'
+                huondans.forEach(huondan => {
+                    huondan.style.display = 'none';
+                });
+    
+                // Hiển thị 'huondan' tương ứng với 'anhuongdan' đã bấm
+                huondans[index].style.display = 'block';
+            });
+        });
+    });
+// hienthi anh
+document.addEventListener('DOMContentLoaded', function() {
+    // Danh sách các ảnh trong trình chiếu
+    const images = [
+        'img/buoc2.jpg',
+        'img/buoc1.jpg',
+        'img/buoc5.jpg'
+    ];
+    
+    let currentImageIndex = 0;
+    const screen = document.getElementById('screen');
+
+    // Hiển thị ảnh hiện tại
+    function showImage(index) {
+        screen.style.backgroundImage = `url('${images[index]}')`;
+    }
+
+    // Chuyển sang ảnh trước
+    document.getElementById('prevBtn').addEventListener('click', function() {
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        showImage(currentImageIndex);
+    });
+
+    // Chuyển sang ảnh tiếp theo
+    document.getElementById('nextBtn').addEventListener('click', function() {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        showImage(currentImageIndex);
+    });
+
+    // Hiển thị ảnh đầu tiên khi tải trang
+    showImage(currentImageIndex);
+});
 
 function showContent(contentId) {
     // Ẩn tất cả các nội dung
