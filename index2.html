@@ -576,27 +576,91 @@
         
         <!-- Thanh điều hướng các bước -->
         <div class="guide-nav">
-            <button class="guide-nav-btn active">Chuyển tiền</button>
-            <button class="guide-nav-btn">Chuyển tiền đến ngân hàng</button>
-            <button class="guide-nav-btn">Yêu cầu chuyển tiền</button>
-            <button class="guide-nav-btn">Chia hoá đơn</button>
+            <button class="guide-nav-btn active" onclick="showContainer(0)">Chuyển tiền</button>
+            <button class="guide-nav-btn" onclick="showContainer(1)">Chuyển tiền đến ngân hàng</button>
+            <button class="guide-nav-btn" onclick="showContainer(2)">Yêu cầu chuyển tiền</button>
+            <button class="guide-nav-btn" onclick="showContainer(3)">Chia hoá đơn</button>
         </div>
         
         <!-- Nội dung -->
-        <div class="content-container">
+        <div class="content-container" id="container-0">
             <div class="guide-image">
                 <button class="nav-btn prev-btn" onclick="prevStep()"><i class='bx bx-chevron-left'></i></button>
                 <img id="phoneImage" src="imgIndex_2/phone1.png" alt="Hướng dẫn">
                 <button class="nav-btn next-btn" onclick="nextStep()"><i class='bx bx-chevron-right'></i></button>
             </div>
             <div class="guide-content">
+                <div class="guide-steps">
                 <ol>
-                    <li onclick="showStep(0)">1. Tại màn hình chính, chọn tính năng "Chuyển tiền - MoMo liền"</li>
-                    <li onclick="showStep(1)">2. Chọn chuyển tiền "Đến Ví MoMo"</li>
-                    <li onclick="showStep(2)">3. Chọn người nhận</li>
-                    <li onclick="showStep(3)">4. Nhập số tiền, lời nhắn và thêm sticker, hình nền để bày tỏ cảm xúc</li>
-                    <li onclick="showStep(4)">5. Chọn "Nguồn tiền" & "Xác nhận" để hoàn tất chuyển tiền</li>
+                    <li onclick="showStep(0)">
+                        <div class="step">
+                            <span class="step-number ">1</span>
+                            <p class="step-text">Tại màn hình chính, chọn tính năng "Chuyển tiền - MoMo liền"</p>
+                        </div>
+                    </li>
+                    <li onclick="showStep(1)">
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <p class="step-text">Chọn chuyển tiền “Đến Ví MoMo"</p>
+                        </div>
+                    </li>
+                    <li onclick="showStep(2)">
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <p class="step-text">Chọn người nhận</p>
+                        </div>
+                    </li>
+                    <li onclick="showStep(3)">
+                        <div class="step">
+                            <span class="step-number">4</span>
+                            <p class="step-text">Nhập số tiền, lời nhắn và thêm sticker, hình nền để bày tỏ cảm xúc</p>
+                        </div>
+                    </li>
+                    <li onclick="showStep(4)">
+                        <div class="step">
+                            <span class="step-number">5</span>
+                            <p class="step-text">Chọn “Nguồn tiền" & “Xác nhận" để hoàn tất chuyển tiền</p>
+                        </div>
+                    </li>
                 </ol>
+                </div>
+            </div>
+        </div>
+        <div class="content-container" id="container-1" style="display: none;">
+            <div class="guide-image">
+                <button class="nav-btn prev-btn" onclick="prevStep()"><i class='bx bx-chevron-left'></i></button>
+                <img id="phoneImage" src="imgIndex_2/phone6.png" alt="Hướng dẫn">
+                <button class="nav-btn next-btn" onclick="nextStep()"><i class='bx bx-chevron-right'></i></button>
+            </div>
+            <div class="guide-content">
+                <div class="guide-steps">
+                <ol>
+                    <li onclick="showStep(0)">
+                        <div class="step">
+                            <span class="step-number ">1</span>
+                            <p class="step-text">Tại màn hình chính MoMo, chọn biểu tượng “Chuyển tiền Ngân hàng”;</p>
+                        </div>
+                    </li>
+                    <li onclick="showStep(1)">
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <p class="step-text">Chọn Ngân hàng và nhập số tài khoản hoặc chọn người cần chuyển;</p>
+                        </div>
+                    </li>
+                    <li onclick="showStep(2)">
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <p class="step-text">Nhập số tiền cần chuyển > Chọn “Tiếp tục”;</p>
+                        </div>
+                    </li>
+                    <li onclick="showStep(3)">
+                        <div class="step">
+                            <span class="step-number">4</span>
+                            <p class="step-text">Chọn nguồn tiền bất kỳ > Kiểm tra và bấm “Xác nhận” là hoàn tất giao dịch.</p>
+                        </div>
+                    </li>
+                </ol>
+                </div>
             </div>
         </div>
     </div>

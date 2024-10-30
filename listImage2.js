@@ -353,30 +353,93 @@ const images = [
     "imgIndex_2/phone4.png",
     "imgIndex_2/phone5.png"
 ];
-
-let currentStep = 0; // Biến để lưu bước hiện tại
+document.addEventListener("DOMContentLoaded", function() {
+    showStep(0); // Mặc định chọn Step 1 khi mở trang
+});
+let currentStep = 0;
 
 function showStep(stepIndex) {
-    // Cập nhật bước hiện tại
+    const imageElement = document.getElementById("phoneImage");
+    // Xác định hướng trượt
+    const direction = stepIndex > currentStep ? 'next-btn' : 'prev-btn';
+
+    // Đặt vị trí ban đầu của ảnh để chuẩn bị trượt
+    imageElement.style.transition = 'none'; // Xóa chuyển động tạm thời
+    imageElement.style.transform = `translateX(${direction === 'next-btn' ? '100%' : '-100%'})`;
+
+    // Đợi một chút rồi đổi `src` của ảnh để cập nhật ảnh mới
+    setTimeout(() => {
+        imageElement.src = images[stepIndex];
+        
+        // Đợi trình duyệt cập nhật `src` của ảnh trước khi thêm chuyển động
+        setTimeout(() => {
+            imageElement.style.transition = 'transform 0.5s ease'; // Thêm chuyển động trở lại
+            imageElement.style.transform = 'translateX(0)'; // Trượt ảnh vào vị trí trung tâm
+        }, 20); // Đợi một chút trước khi thêm chuyển động để đảm bảo ảnh đã cập nhật
+    }, 0);
+
     currentStep = stepIndex;
+
+    // Cập nhật phần nội dung các bước bên cạnh
+    document.querySelectorAll('.guide-content li').forEach((li, index) => {
+        if (index === stepIndex) {
+            li.classList.add('active-step');
+        } else {
+            li.classList.remove('active-step');
+        }
+    });
+
+    // Cập nhật class cho các bước
+    document.querySelectorAll('.guide-content li').forEach((li, index) => {
+        if (index === stepIndex) {
+            li.classList.add('active-step-text');
+        } else {
+            li.classList.remove('active-step-text');
+        }
+    });
+
     // Cập nhật ảnh dựa trên chỉ số bước
     document.getElementById("phoneImage").src = images[stepIndex];
 
-    // Xóa kiểu chọn cho các bước khác
+    // Xóa kiểu chọn cho các bước khác và thêm class active-step cho bước hiện tại
     document.querySelectorAll('.guide-content li').forEach((li, index) => {
-        li.style.fontWeight = index === stepIndex ? "bold" : "normal";
-        li.style.color = index === stepIndex ? "#ff4d4f" : "#333";
+        if (index === stepIndex) {
+            li.classList.add('active-step-text');
+        } else {
+            li.classList.remove('active-step-text');
+        }
     });
 }
 
 function nextStep() {
-    // Tăng chỉ số bước và làm mới nếu vượt quá số bước
-    currentStep = (currentStep + 1) % images.length;
-    showStep(currentStep);
+    const newIndex = (currentStep + 1) % images.length;
+    showStep(newIndex);
 }
 
 function prevStep() {
-    // Giảm chỉ số bước và làm mới nếu nhỏ hơn 0
-    currentStep = (currentStep - 1 + images.length) % images.length;
-    showStep(currentStep);
+    const newIndex = (currentStep - 1 + images.length) % images.length;
+    showStep(newIndex);
+}
+
+//hàm show ra các conatainer khác
+function showContainer(index) {
+    // Ẩn tất cả các container
+    document.querySelectorAll('.content-container').forEach(container => {
+        container.style.display = 'none';
+        container.classList.remove('active');
+    });
+
+    // Hiển thị container được chọn
+    const selectedContainer = document.getElementById(`container-${index}`);
+    selectedContainer.style.display = 'flex';
+    selectedContainer.classList.add('active');
+
+    // Đặt tất cả các nút về trạng thái bình thường và làm nổi bật nút được chọn
+    document.querySelectorAll('.guide-nav-btn').forEach((btn, btnIndex) => {
+        if (btnIndex === index) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
 }
