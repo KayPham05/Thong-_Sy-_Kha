@@ -346,41 +346,206 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Phần Hướng dẩn chuyển tiền 
 // Danh sách các ảnh và nội dung từng bước
-const images = [
-    "imgIndex_2/phone1.png",
-    "imgIndex_2/phone2.png",
-    "imgIndex_2/phone3.png",
-    "imgIndex_2/phone4.png",
-    "imgIndex_2/phone5.png"
-];
-document.addEventListener("DOMContentLoaded", function() {
-    showStep(0); // Mặc định chọn Step 1 khi mở trang
-});
-let currentStep = 0;
+// const images = [
+//     "imgIndex_2/phone1.png",
+//     "imgIndex_2/phone2.png",
+//     "imgIndex_2/phone3.png",
+//     "imgIndex_2/phone4.png",
+//     "imgIndex_2/phone5.png"
+// ];
+// document.addEventListener("DOMContentLoaded", function() {
+//     showStep(0); // Mặc định chọn Step 1 khi mở trang
+// });
+// let currentStep = 0;
 
+// function showStep(stepIndex) {
+//     const imageElement = document.getElementById("phoneImage");
+//     // Xác định hướng trượt
+//     const direction = stepIndex > currentStep ? 'next-btn' : 'prev-btn';
+
+//     // Đặt vị trí ban đầu của ảnh để chuẩn bị trượt
+//     imageElement.style.transition = 'none'; // Xóa chuyển động tạm thời
+//     imageElement.style.transform = `translateX(${direction === 'next-btn' ? '100%' : '-100%'})`;
+
+//     // Đợi một chút rồi đổi `src` của ảnh để cập nhật ảnh mới
+//     setTimeout(() => {
+//         imageElement.src = images[stepIndex];
+        
+//         // Đợi trình duyệt cập nhật `src` của ảnh trước khi thêm chuyển động
+//         setTimeout(() => {
+//             imageElement.style.transition = 'transform 0.5s ease'; // Thêm chuyển động trở lại
+//             imageElement.style.transform = 'translateX(0)'; // Trượt ảnh vào vị trí trung tâm
+//         }, 20); // Đợi một chút trước khi thêm chuyển động để đảm bảo ảnh đã cập nhật
+//     }, 0);
+
+//     currentStep = stepIndex;
+
+//     // Cập nhật phần nội dung các bước bên cạnh
+//     document.querySelectorAll('.guide-content li').forEach((li, index) => {
+//         if (index === stepIndex) {
+//             li.classList.add('active-step');
+//         } else {
+//             li.classList.remove('active-step');
+//         }
+//     });
+
+//     // Cập nhật class cho các bước
+//     document.querySelectorAll('.guide-content li').forEach((li, index) => {
+//         if (index === stepIndex) {
+//             li.classList.add('active-step-text');
+//         } else {
+//             li.classList.remove('active-step-text');
+//         }
+//     });
+
+//     // Cập nhật ảnh dựa trên chỉ số bước
+//     document.getElementById("phoneImage").src = images[stepIndex];
+
+//     // Xóa kiểu chọn cho các bước khác và thêm class active-step cho bước hiện tại
+//     document.querySelectorAll('.guide-content li').forEach((li, index) => {
+//         if (index === stepIndex) {
+//             li.classList.add('active-step-text');
+//         } else {
+//             li.classList.remove('active-step-text');
+//         }
+//     });
+// }
+
+// function nextStep() {
+//     const newIndex = (currentStep + 1) % images.length;
+//     showStep(newIndex);
+// }
+
+// function prevStep() {
+//     const newIndex = (currentStep - 1 + images.length) % images.length;
+//     showStep(newIndex);
+// }
+
+// //hàm show ra các conatainer khác
+// function showContainer(index) {
+//     // Ẩn tất cả các container
+//     document.querySelectorAll('.content-container').forEach(container => {
+//         container.style.display = 'none';
+//         container.classList.remove('active');
+//     });
+
+//     // Hiển thị container được chọn
+//     const selectedContainer = document.getElementById(`container-${index}`);
+//     selectedContainer.style.display = 'flex';
+//     selectedContainer.classList.add('active');
+
+//     // Đặt tất cả các nút về trạng thái bình thường và làm nổi bật nút được chọn
+//     document.querySelectorAll('.guide-nav-btn').forEach((btn, btnIndex) => {
+//         if (btnIndex === index) {
+//             btn.classList.add('active');
+//         } else {
+//             btn.classList.remove('active');
+//         }
+//     });
+// }
+
+// Dữ liệu cho từng guide-nav-btn
+const guideData = [
+    {
+        images: [
+            "imgIndex_2/phone1.png",
+            "imgIndex_2/phone2.png",
+            "imgIndex_2/phone3.png",
+            "imgIndex_2/phone4.png",
+            "imgIndex_2/phone5.png"
+        ],
+        steps: [
+            "Tại màn hình chính, chọn tính năng 'Chuyển tiền - MoMo liền'",
+            "Chọn chuyển tiền 'Đến Ví MoMo'",
+            "Chọn người nhận",
+            "Nhập số tiền, lời nhắn và thêm sticker, hình nền để bày tỏ cảm xúc",
+            "Chọn 'Nguồn tiền' & 'Xác nhận' để hoàn tất chuyển tiền"
+        ]
+    },
+    {
+        images: [
+            "imgIndex_2/phone6.png",
+            "imgIndex_2/phone7.png",
+            "imgIndex_2/phone8.png",
+            "imgIndex_2/phone9.png"
+        ],
+        steps: [
+            "Tại màn hình chính MoMo, chọn biểu tượng 'Chuyển tiền Ngân hàng'",
+            "Chọn Ngân hàng và nhập số tài khoản hoặc chọn người cần chuyển",
+            "Nhập số tiền cần chuyển > Chọn 'Tiếp tục'",
+            "Chọn nguồn tiền bất kỳ > Kiểm tra và bấm 'Xác nhận' là hoàn tất giao dịch."
+        ]
+    },
+    {
+        images: [
+            "imgIndex_2/phone10.png",
+            "imgIndex_2/phone11.png",
+            "imgIndex_2/phone12.png",
+            "imgIndex_2/phone13.png"
+        ],
+        steps: [
+            "Tại màn hình chính, chọn tính năng 'Chuyển tiền - MoMo liền'",
+            "Tại mục 'Tiện ích khác' >> Chọn 'Yêu cầu chuyển tiền'",
+            "Chọn 'Tạo yêu cầu chuyển tiền'",
+            "Nhập số tiền, lời nhắn, đính kèm hình ảnh & 'Thêm người nhận' >> Chọn 'Gửi yêu cầu' là hoàn tất"
+        ]
+    },
+    {
+        images: [
+            "imgIndex_2/phone14.png",
+            "imgIndex_2/phone15.png",
+            "imgIndex_2/phone16.png",
+            "imgIndex_2/phone17.png",
+            "imgIndex_2/phone18.png"
+        ],
+        steps: [
+            "Ngay sau “Giao dịch thanh toán thành công” hoặc trong “Chi tiết giao dịch”, chọn “Chia tiền”.",
+            "Nhập tổng số tiền cần lấy lại.",
+            "Chọn “Thêm người nhận”",
+            "Chọn “Gửi yêu cầu” > Tiền sẽ tự động chia đều và gửi tới cho tất cả người nhận",
+            "Theo dõi tình trạng “Chia hóa đơn”"
+
+        ]
+    },
+    // Thêm các mục guideData khác nếu cần
+];
+
+let currentGuideIndex = 0; // Lưu chỉ số của guide hiện tại
+let currentStep = 0; // Lưu chỉ số bước hiện tại
+
+// Hàm để hiển thị bước cụ thể
 function showStep(stepIndex) {
     const imageElement = document.getElementById("phoneImage");
-    // Xác định hướng trượt
-    const direction = stepIndex > currentStep ? 'next-btn' : 'prev-btn';
+    const guide = guideData[currentGuideIndex];
 
-    // Đặt vị trí ban đầu của ảnh để chuẩn bị trượt
-    imageElement.style.transition = 'none'; // Xóa chuyển động tạm thời
-    imageElement.style.transform = `translateX(${direction === 'next-btn' ? '100%' : '-100%'})`;
+    // Đảm bảo bước nằm trong phạm vi hợp lệ
+    if (stepIndex >= 0 && stepIndex < guide.images.length) {
+        // Xác định hướng trượt (lướt phải nếu stepIndex lớn hơn currentStep, ngược lại thì lướt trái)
+        const direction = stepIndex > currentStep ? 'next' : 'prev';
 
-    // Đợi một chút rồi đổi `src` của ảnh để cập nhật ảnh mới
-    setTimeout(() => {
-        imageElement.src = images[stepIndex];
-        
-        // Đợi trình duyệt cập nhật `src` của ảnh trước khi thêm chuyển động
+        // Đặt vị trí ban đầu của ảnh để chuẩn bị trượt
+        imageElement.style.transition = 'none'; // Xóa chuyển động tạm thời
+        imageElement.style.transform = `translateX(${direction === 'next' ? '100%' : '-100%'})`;
+
+        // Đợi một chút rồi đổi `src` của ảnh để cập nhật ảnh mới
         setTimeout(() => {
-            imageElement.style.transition = 'transform 0.5s ease'; // Thêm chuyển động trở lại
-            imageElement.style.transform = 'translateX(0)'; // Trượt ảnh vào vị trí trung tâm
-        }, 20); // Đợi một chút trước khi thêm chuyển động để đảm bảo ảnh đã cập nhật
-    }, 0);
+            imageElement.src = guide.images[stepIndex];
+            
+            // Đợi trình duyệt cập nhật `src` của ảnh trước khi thêm chuyển động
+            setTimeout(() => {
+                imageElement.style.transition = 'transform 0.5s ease'; // Thêm chuyển động trở lại
+                imageElement.style.transform = 'translateX(0)'; // Trượt ảnh vào vị trí trung tâm
+            }, 20); // Đợi một chút trước khi thêm chuyển động để đảm bảo ảnh đã cập nhật
+        }, 0);
 
-    currentStep = stepIndex;
+        currentStep = stepIndex;
 
-    // Cập nhật phần nội dung các bước bên cạnh
+        // Cập nhật nội dung cho các bước
+        document.querySelectorAll('.guide-content .step-text').forEach((text, index) => {
+            text.textContent = guide.steps[index] || ""; // Cập nhật nội dung từng bước
+        });
+    }
+        // Cập nhật phần nội dung các bước bên cạnh
     document.querySelectorAll('.guide-content li').forEach((li, index) => {
         if (index === stepIndex) {
             li.classList.add('active-step');
@@ -397,49 +562,46 @@ function showStep(stepIndex) {
             li.classList.remove('active-step-text');
         }
     });
+}
 
-    // Cập nhật ảnh dựa trên chỉ số bước
-    document.getElementById("phoneImage").src = images[stepIndex];
+// Hàm chuyển đổi giữa các guideData
+function showContainer(index) {
+    currentGuideIndex = index; // Cập nhật guide hiện tại
+    currentStep = 0; // Đặt lại bước về 0
+    showStep(currentStep);
 
-    // Xóa kiểu chọn cho các bước khác và thêm class active-step cho bước hiện tại
-    document.querySelectorAll('.guide-content li').forEach((li, index) => {
-        if (index === stepIndex) {
-            li.classList.add('active-step-text');
+    // Hiển thị các bước cho guide hiện tại
+    const guideSteps = guideData[index].steps;
+    const stepElements = document.querySelectorAll('.guide-content ol li');
+    stepElements.forEach((step, idx) => {
+        const stepText = step.querySelector('.step-text');
+        if (guideSteps[idx]) {
+            stepText.textContent = guideSteps[idx];
+            step.style.display = ""; // Hiển thị step
         } else {
-            li.classList.remove('active-step-text');
+            step.style.display = "none"; // Ẩn step nếu không có nội dung
         }
+    });
+
+    // Cập nhật các nút điều hướng
+    document.querySelectorAll('.guide-nav-btn').forEach((btn, btnIndex) => {
+        btn.classList.toggle('active', btnIndex === index);
     });
 }
 
 function nextStep() {
-    const newIndex = (currentStep + 1) % images.length;
+    const guide = guideData[currentGuideIndex];
+    const newIndex = (currentStep + 1) % guide.images.length;
     showStep(newIndex);
 }
 
 function prevStep() {
-    const newIndex = (currentStep - 1 + images.length) % images.length;
+    const guide = guideData[currentGuideIndex];
+    const newIndex = (currentStep - 1 + guide.images.length) % guide.images.length;
     showStep(newIndex);
 }
 
-//hàm show ra các conatainer khác
-function showContainer(index) {
-    // Ẩn tất cả các container
-    document.querySelectorAll('.content-container').forEach(container => {
-        container.style.display = 'none';
-        container.classList.remove('active');
-    });
-
-    // Hiển thị container được chọn
-    const selectedContainer = document.getElementById(`container-${index}`);
-    selectedContainer.style.display = 'flex';
-    selectedContainer.classList.add('active');
-
-    // Đặt tất cả các nút về trạng thái bình thường và làm nổi bật nút được chọn
-    document.querySelectorAll('.guide-nav-btn').forEach((btn, btnIndex) => {
-        if (btnIndex === index) {
-            btn.classList.add('active');
-        } else {
-            btn.classList.remove('active');
-        }
-    });
-}
+// Khởi tạo mặc định
+document.addEventListener("DOMContentLoaded", () => {
+    showContainer(0); // Mặc định hiển thị guide đầu tiên
+});

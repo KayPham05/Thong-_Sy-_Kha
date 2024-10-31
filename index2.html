@@ -571,15 +571,16 @@
             </div>
         </div>
     </div>
+    <!-- Hướng dẩn chuyển tiền  -->
     <div class="guide-container">
         <h2 class="guide-title">Hướng dẫn chuyển nhận tiền</h2>
         
         <!-- Thanh điều hướng các bước -->
         <div class="guide-nav">
-            <button class="guide-nav-btn active" onclick="showContainer(0)">Chuyển tiền</button>
-            <button class="guide-nav-btn" onclick="showContainer(1)">Chuyển tiền đến ngân hàng</button>
-            <button class="guide-nav-btn" onclick="showContainer(2)">Yêu cầu chuyển tiền</button>
-            <button class="guide-nav-btn" onclick="showContainer(3)">Chia hoá đơn</button>
+            <button class="guide-nav-btn guide-nav-btn1  active" onclick="showContainer(0)">Chuyển tiền</button>
+            <button class="guide-nav-btn guide-nav-btn2 " onclick="showContainer(1)">Chuyển tiền đến ngân hàng</button>
+            <button class="guide-nav-btn guide-nav-btn3 " onclick="showContainer(2)">Yêu cầu chuyển tiền</button>
+            <button class="guide-nav-btn guide-nav-btn4 " onclick="showContainer(3)">Chia hoá đơn</button>
         </div>
         
         <!-- Nội dung -->
@@ -626,45 +627,70 @@
                 </div>
             </div>
         </div>
-        <div class="content-container" id="container-1" style="display: none;">
-            <div class="guide-image">
-                <button class="nav-btn prev-btn" onclick="prevStep()"><i class='bx bx-chevron-left'></i></button>
-                <img id="phoneImage" src="imgIndex_2/phone6.png" alt="Hướng dẫn">
-                <button class="nav-btn next-btn" onclick="nextStep()"><i class='bx bx-chevron-right'></i></button>
+    </div>
+    <!-- chuyển tiền bằng ví momo bảo mật  -->
+    <div class="transfer-container">
+        <div class="header-transfer-container">
+            <h2>Chuyển tiền bằng Ví MoMo</h2>
+            <h2>An toàn, bảo mật, chuyển nhận trong 1s</h2>
+        </div>
+        <div class="transfer-content">
+            <div class="transfer-info left">
+                <div class="info-item">
+                    <img src="imgIndex_2/icon1.png" alt="Icon 1">
+                    <div class="conten-info-item">
+                        <h3>Miễn phí chuyển tiền đến Ví MoMo</h3>
+                        <p>Bạn có thể dùng Ví MoMo chuyển tiền đến Ví MoMo của người thân/bạn bè mọi lúc mọi nơi HOÀN TOÀN MIỄN PHÍ, 1.000đ cũng chuyển.</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <img src="imgIndex_2/icon2.png" alt="Icon 2">
+                    <div class="div conten-info-item">
+                        <h3>Chuyển tiền 24/7 đến ngân hàng với mức phí hấp dẫn</h3>
+                        <p>Dễ dàng chuyển tiền đến hơn 40 ngân hàng nội địa, 24/7, kể cả cuối tuần và ngày lễ, với mức phí chuyển tiền siêu ưu đãi.</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <img src="imgIndex_2/icon3.png" alt="Icon 3">
+                    <div class="div conten-info-item">
+                        <h3>Hỗ trợ mọi giao dịch từ chỉ 1.000đ</h3>
+                        <p>Giao dịch nhỏ hay số tiền lẻ đều có thể chuyển qua Ví MoMo, bạn có thể chuyển bất cứ số tiền nào kể cả 1.000đ.</p>
+                    </div>
+                </div>
             </div>
-            <div class="guide-content">
-                <div class="guide-steps">
-                <ol>
-                    <li onclick="showStep(0)">
-                        <div class="step">
-                            <span class="step-number ">1</span>
-                            <p class="step-text">Tại màn hình chính MoMo, chọn biểu tượng “Chuyển tiền Ngân hàng”;</p>
-                        </div>
-                    </li>
-                    <li onclick="showStep(1)">
-                        <div class="step">
-                            <span class="step-number">2</span>
-                            <p class="step-text">Chọn Ngân hàng và nhập số tài khoản hoặc chọn người cần chuyển;</p>
-                        </div>
-                    </li>
-                    <li onclick="showStep(2)">
-                        <div class="step">
-                            <span class="step-number">3</span>
-                            <p class="step-text">Nhập số tiền cần chuyển > Chọn “Tiếp tục”;</p>
-                        </div>
-                    </li>
-                    <li onclick="showStep(3)">
-                        <div class="step">
-                            <span class="step-number">4</span>
-                            <p class="step-text">Chọn nguồn tiền bất kỳ > Kiểm tra và bấm “Xác nhận” là hoàn tất giao dịch.</p>
-                        </div>
-                    </li>
-                </ol>
+            
+            <div class="momo-card">
+                <img src="/imgIndex_2/momoSo1.png" alt="MoMo Card">
+                <button class="open-popup-btn location" data-popup-overlay="popupOverlayNew" data-popup-modal="popupModalNew">
+                    TAI VI MOMO NGAY
+                </button>
+            </div>
+    
+            <div class="transfer-info right">
+                <div class="info-item">
+                    <img src="imgIndex_2/icon4.png" alt="Icon 4">
+                    <div class="div conten-info-item">
+                        <h3>Chuyển tiền ngay lập tức</h3>
+                        <p>Chỉ với số điện thoại của người nhận, bạn có thể dễ dàng chuyển tiền ngay lập tức. Người nhận sẽ nhận được tiền chỉ trong 1s.</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <img src="imgIndex_2/icon5.png" alt="Icon 5">
+                    <div class="div conten-info-item">
+                        <h3>An toàn tuyệt đối</h3>
+                        <p>Ví MoMo là ví điện tử đầu tiên tại Việt Nam đạt chứng nhận bảo mật toàn cầu PCI DSS cấp độ cao nhất.</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <img src="imgIndex_2/icon6.png" alt="Icon 6">
+                    <div class="div conten-info-item">
+                        <h3>Xác nhận ngay</h3>
+                        <p>Chuyển tiền nhận được liền nhờ thông báo xác nhận chuyển tiền thành công ngay sau khi bạn thực hiện giao dịch.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
         <div class="container1">
             <div class="center">Tiện ích và dịch vụ</div>
             <div class="sub-center">Khám phá hàng trăm tính năng trên siêu ứng dụng giúp bạn có thể thực hiện mọi nhu cầu cuộc sống</div>
