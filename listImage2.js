@@ -605,3 +605,18 @@ function prevStep() {
 document.addEventListener("DOMContentLoaded", () => {
     showContainer(0); // Mặc định hiển thị guide đầu tiên
 });
+
+function toggleAnswer(element) {
+    // Tìm phần tử cha của câu hỏi
+    const faqItem = element.parentElement;
+    // Thêm hoặc xóa class "active" để quản lý hiển thị
+    faqItem.classList.toggle("active");
+    // Hiển thị hoặc ẩn câu trả lời
+    const answer = faqItem.querySelector(".faq-answer");
+    answer.style.display = answer.style.display === "block" ? "none" : "block";
+    // Đóng tất cả các câu hỏi khác nếu cần
+    document.querySelectorAll('.faq-item').forEach(item => {
+        if (item !== faqItem) item.classList.remove('active');
+    });
+    
+}
