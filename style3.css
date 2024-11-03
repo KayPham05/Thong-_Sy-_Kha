@@ -44,6 +44,8 @@ header p {
 }
 
 .table-submenu {
+    display: flex;
+    align-items: baseline;
     width: 100%;
     border-collapse: collapse;
     z-index: 2000;
@@ -2231,4 +2233,134 @@ table {
     max-height: 300px; /* Đặt giá trị lớn hơn chiều cao của nội dung */
     opacity: 1;
     transform: translateY(0); /* Đặt lại vị trí về bình thường */
+}
+/* Phan videos  */
+.video-card {
+    position: relative;
+    padding: 10px;
+    width: 60%;
+    height: 300px;
+    background: #f8eaf0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    
+}
+
+.video-card video {
+    width:90%;
+}
+
+.video-btn {
+    top: 40%;
+    left: 42.8%;
+    width: 12.5%;
+    height: 21%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    border:#f4efef solid 2px ;
+    border-radius: 100%;
+    background:rgb(68, 68, 68);
+    box-shadow: #474646;
+    cursor: pointer;
+}
+.video-btn i {
+    padding-left: 14px;
+    color: white;
+    font-size: 50px;
+}
+
+.backgroundvd {
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+.container-thanhToan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.content-ThanhToan {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 20px;
+    gap: 30px;
+}
+.container-DatLich {
+    background-color: #fde7f3;
+    padding: 50px 0;
+    margin: 20px 0;
+}
+.features-DatLich {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+.content-DatLich {
+    display: flex;
+    justify-content: center;
+}
+.header-DatLich {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(212, 42, 135);
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+.header-DatLich h2 {
+    font-weight: 790;
+    margin: 0;
+}
+
+.content-DatLich {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.body-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.body-content li {
+    color: #555555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+.body-content h2 {
+    color:rgb(212, 42, 135);
+    font-weight: bolder;
+    font-size: x-large;
+}
+.img-conten-left {
+    background-color: whitesmoke;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+.img-conten-mid {
+    background-color: whitesmoke;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+.img-conten-right {
+    background-color: whitesmoke;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
 }

@@ -621,3 +621,14 @@ function toggleAnswer(element) {
     });
     
 }
+//play video
+function playVideo() {
+    const video = document.getElementById("promoVideo");
+    const overlay = document.querySelector(".video-btn");
+    const background  = document.querySelector(".backgroundvd");
+    // Hiện video và ẩn overlay
+    overlay.style.display = "none";
+    background.style.display = "none";
+    video.style.display = "block";
+    video.play();
+}
