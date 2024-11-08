@@ -449,63 +449,48 @@ document.addEventListener("DOMContentLoaded", function () {
 const guideData = [
     {
         images: [
-            "imgIndex_2/phone1.png",
-            "imgIndex_2/phone2.png",
-            "imgIndex_2/phone3.png",
-            "imgIndex_2/phone4.png",
-            "imgIndex_2/phone5.png"
+            "imgIndex3/phone1.jpg",
+            "imgIndex3/phone2.jpg",
+            "imgIndex3/phone3.jpg",
+            "imgIndex3/phone4.jpg",
+            "imgIndex3/phone5.jpg"
         ],
         steps: [
-            "Tại màn hình chính, chọn tính năng 'Chuyển tiền - MoMo liền'",
-            "Chọn chuyển tiền 'Đến Ví MoMo'",
-            "Chọn người nhận",
-            "Nhập số tiền, lời nhắn và thêm sticker, hình nền để bày tỏ cảm xúc",
-            "Chọn 'Nguồn tiền' & 'Xác nhận' để hoàn tất chuyển tiền"
+            "Chọn dịch vụ Thanh toán hóa đơn trên Ví MoMo",
+            "Chọn Điện",
+            "Nhập thông tin hóa đơn",
+            "Kiểm tra thông tin hóa đơn",
+            "Xác nhận thanh toán"
         ]
     },
     {
         images: [
-            "imgIndex_2/phone6.png",
-            "imgIndex_2/phone7.png",
-            "imgIndex_2/phone8.png",
-            "imgIndex_2/phone9.png"
+            "imgIndex3/phone6.jpg",
+            "imgIndex3/phone7.jpg",
+            "imgIndex3/phone8.jpg",
+            "imgIndex3/phone9.jpg"
         ],
         steps: [
-            "Tại màn hình chính MoMo, chọn biểu tượng 'Chuyển tiền Ngân hàng'",
-            "Chọn Ngân hàng và nhập số tài khoản hoặc chọn người cần chuyển",
-            "Nhập số tiền cần chuyển > Chọn 'Tiếp tục'",
-            "Chọn nguồn tiền bất kỳ > Kiểm tra và bấm 'Xác nhận' là hoàn tất giao dịch."
+            "Mở MoMo, chọn Thanh toán hóa đơn",
+            "Chọn Lịch Sử",
+            "Màn hình Báo cáo Hóa đơn",
+            "Kiểm tra từng tháng"
         ]
     },
     {
         images: [
-            "imgIndex_2/phone10.png",
-            "imgIndex_2/phone11.png",
-            "imgIndex_2/phone12.png",
-            "imgIndex_2/phone13.png"
+            "imgIndex3/phone10.jpg",
+            "imgIndex3/phone11.jpg",
+            "imgIndex3/phone12.jpg",
+            "imgIndex3/phone13.jpg",
+            "imgIndex3/phone14.jpg"
         ],
         steps: [
-            "Tại màn hình chính, chọn tính năng 'Chuyển tiền - MoMo liền'",
-            "Tại mục 'Tiện ích khác' >> Chọn 'Yêu cầu chuyển tiền'",
-            "Chọn 'Tạo yêu cầu chuyển tiền'",
-            "Nhập số tiền, lời nhắn, đính kèm hình ảnh & 'Thêm người nhận' >> Chọn 'Gửi yêu cầu' là hoàn tất"
-        ]
-    },
-    {
-        images: [
-            "imgIndex_2/phone14.png",
-            "imgIndex_2/phone15.png",
-            "imgIndex_2/phone16.png",
-            "imgIndex_2/phone17.png",
-            "imgIndex_2/phone18.png"
-        ],
-        steps: [
-            "Ngay sau “Giao dịch thanh toán thành công” hoặc trong “Chi tiết giao dịch”, chọn “Chia tiền”.",
-            "Nhập tổng số tiền cần lấy lại.",
-            "Chọn “Thêm người nhận”",
-            "Chọn “Gửi yêu cầu” > Tiền sẽ tự động chia đều và gửi tới cho tất cả người nhận",
-            "Theo dõi tình trạng “Chia hóa đơn”"
-
+            "Mở MoMo, chọn Thanh toán Hóa đơn",
+            "Chọn Kích hoạt thanh toán tự động",
+            "Lựa chọn thời gian và số tiền thanh toán",
+            "Xác nhận",
+            "Đăng ký thành công"
         ]
     },
     // Thêm các mục guideData khác nếu cần

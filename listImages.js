@@ -280,3 +280,169 @@ document.addEventListener('DOMContentLoaded', function() {
     autoActivateTab('Momo đề xuất', 'hiddenImage'); // Thay 'hiddenImage' bằng ID của hình ảnh đầu tiên bạn muốn hiển thị
 });
 
+const guideData = [
+    {
+        images: [
+            "img/phone1.png",
+            "img/phone2.png",
+            "img/phone3.png",
+            "img/phone4.png",
+            "img/phone5.png"
+        ],
+        steps: [
+            "Tải ứng dụng miễn phí bằng cách tìm kiếm từ khóa “momo” trên App Store hoặc Google Play Store.",
+            "Mở ứng dụng và nhập số điện thoại bạn muốn đăng ký MoMo.",
+            "Một tin nhắn chứa mã xác thực sẽ gửi trực tiếp đến số điện thoại của bạn.",
+            "Thiết lập mật khẩu để bảo vệ tài khoản MoMo của bạn gồm 6 chữ số và mật khẩu ở 2 ô phải hoàn toàn giống nhau.",
+            "Sau khi tạo mật khẩu đăng nhập thành công, bạn nhập thông tin cá nhân theo yêu cầu và nhấn Xác Nhận để hoàn tất đăng ký."
+        ]
+    },
+    {
+        images: [
+            "img/phone6.png",
+            "img/phone7.png",
+            "img/phone8.png",
+            "img/phone9.png",
+            "img/phone10.png",
+            "img/phone11.png"
+        ],
+        steps: [
+            "- Chọn 'Quản lý tài khoản' tại màn hình chính.* Bạn có thể liên kết cùng lúc nhiều ngân hàng trên tài khoản MoMo. ",
+            "Nhấn 'Liên kết ngay'",
+            "Chọn logo Ngân hàng",
+            "Nhập thông tin chủ thẻ và nhấn 'Tiếp tục'",
+            "Nhập mã xác thực OTP và nhấn 'Tiếp tục' để hoàn tất liên kết",
+            "Liên kết thành công"
+        ]
+    },
+    {
+        images: [
+            "img/phone12.png",
+            "img/phone13.png",
+            "img/phone14.png",
+            "img/phone15.png",
+            "img/phone16.png",
+            "img/phone17.png"
+        ],
+        steps: [
+            "Chọn 'Nạp tiền' từ màn hình chính của MoMo",
+            "Nhập số tiền cần nạp và chọn nguồn tiền",
+            "Xác nhận giao dịch",
+            "Nhập mật khẩu để tiếp tục",
+            "Nhập mã xác thực (nếu có) và hoàn tất giao dịch",
+            "Giao dịch thành công"
+        ]
+    },
+    // Thêm các mục guideData khác nếu cần
+];
+
+let currentGuideIndex = 0; // Lưu chỉ số của guide hiện tại
+let currentStep = 0; // Lưu chỉ số bước hiện tại
+
+// Hàm để hiển thị bước cụ thể
+function showStep(stepIndex) {
+    const imageElement = document.getElementById("phoneImage");
+    const guide = guideData[currentGuideIndex];
+
+    // Đảm bảo bước nằm trong phạm vi hợp lệ
+    if (stepIndex >= 0 && stepIndex < guide.images.length) {
+        // Xác định hướng trượt (lướt phải nếu stepIndex lớn hơn currentStep, ngược lại thì lướt trái)
+        const direction = stepIndex > currentStep ? 'next' : 'prev';
+
+        // Đặt vị trí ban đầu của ảnh để chuẩn bị trượt
+        imageElement.style.transition = 'none'; // Xóa chuyển động tạm thời
+        imageElement.style.transform = `translateX(${direction === 'next' ? '100%' : '-100%'})`;
+
+        // Đợi một chút rồi đổi `src` của ảnh để cập nhật ảnh mới
+        setTimeout(() => {
+            imageElement.src = guide.images[stepIndex];
+            
+            // Đợi trình duyệt cập nhật `src` của ảnh trước khi thêm chuyển động
+            setTimeout(() => {
+                imageElement.style.transition = 'transform 0.5s ease'; // Thêm chuyển động trở lại
+                imageElement.style.transform = 'translateX(0)'; // Trượt ảnh vào vị trí trung tâm
+            }, 20); // Đợi một chút trước khi thêm chuyển động để đảm bảo ảnh đã cập nhật
+        }, 0);
+
+        currentStep = stepIndex;
+
+        // Cập nhật nội dung cho các bước
+        document.querySelectorAll('.guide-content .step-text').forEach((text, index) => {
+            text.textContent = guide.steps[index] || ""; // Cập nhật nội dung từng bước
+        });
+    }
+        // Cập nhật phần nội dung các bước bên cạnh
+    document.querySelectorAll('.guide-content li').forEach((li, index) => {
+        if (index === stepIndex) {
+            li.classList.add('active-step');
+        } else {
+            li.classList.remove('active-step');
+        }
+    });
+
+    // Cập nhật class cho các bước
+    document.querySelectorAll('.guide-content li').forEach((li, index) => {
+        if (index === stepIndex) {
+            li.classList.add('active-step-text');
+        } else {
+            li.classList.remove('active-step-text');
+        }
+    });
+}
+
+// Hàm chuyển đổi giữa các guideData
+function showContainer(index) {
+    currentGuideIndex = index; // Cập nhật guide hiện tại
+    currentStep = 0; // Đặt lại bước về 0
+    showStep(currentStep);
+
+    // Hiển thị các bước cho guide hiện tại
+    const guideSteps = guideData[index].steps;
+    const stepElements = document.querySelectorAll('.guide-content ol li');
+    stepElements.forEach((step, idx) => {
+        const stepText = step.querySelector('.step-text');
+        if (guideSteps[idx]) {
+            stepText.textContent = guideSteps[idx];
+            step.style.display = ""; // Hiển thị step
+        } else {
+            step.style.display = "none"; // Ẩn step nếu không có nội dung
+        }
+    });
+
+    // Cập nhật các nút điều hướng
+    document.querySelectorAll('.guide-nav-btn').forEach((btn, btnIndex) => {
+        btn.classList.toggle('active', btnIndex === index);
+    });
+}
+
+function nextStep() {
+    const guide = guideData[currentGuideIndex];
+    const newIndex = (currentStep + 1) % guide.images.length;
+    showStep(newIndex);
+}
+
+function prevStep() {
+    const guide = guideData[currentGuideIndex];
+    const newIndex = (currentStep - 1 + guide.images.length) % guide.images.length;
+    showStep(newIndex);
+}
+
+// Khởi tạo mặc định
+document.addEventListener("DOMContentLoaded", () => {
+    showContainer(0); // Mặc định hiển thị guide đầu tiên
+});
+
+function toggleAnswer(element) {
+    // Tìm phần tử cha của câu hỏi
+    const faqItem = element.parentElement;
+    // Thêm hoặc xóa class "active" để quản lý hiển thị
+    faqItem.classList.toggle("active");
+    // Hiển thị hoặc ẩn câu trả lời
+    const answer = faqItem.querySelector(".faq-answer");
+    answer.style.display = answer.style.display === "block" ? "none" : "block";
+    // Đóng tất cả các câu hỏi khác nếu cần
+    document.querySelectorAll('.faq-item').forEach(item => {
+        if (item !== faqItem) item.classList.remove('active');
+    });
+    
+}

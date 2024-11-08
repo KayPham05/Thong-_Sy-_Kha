@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>momo</title>
-<link rel="stylesheet" href="style.css">
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>momo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body> 
 <header >
     <div class="logo">
-        <img src="img/logo.png"></div>
+        <a href="index.html">
+            <img src="img/logo.png">
+        </a>
+    </div>
     <nav>
         <ul class="menu">
             <li><a >Dịch vụ</a>
@@ -1090,8 +1092,12 @@
                 </div>
             </div>
             <div class="popup-footer">
-                <button class="btn-travel">Đổi Quà Du Lịch</button>
-                <button class="btn-book">Đặt Vé Bay</button>
+                <button class="open-popup-btn" data-popup-overlay="popupOverlayNew" data-popup-modal="popupModalNew">
+                    Đổi Quà Du Lịch
+                </button>
+                <button class="open-popup-btn" data-popup-overlay="popupOverlayNew" data-popup-modal="popupModalNew">
+                    Đặt Vé Bay
+                </button>
             </div>
         </div><!-- the dong popup1 -->
                         
@@ -1136,8 +1142,12 @@
                 </div>
             </div>  
             <div class="popup-footer">
-                <button class="btn-travel">Thanh Toán Ngay</button>
-                <button class="btn-book">Liên Kết Ngay</button>
+                <button class="open-popup-btn" data-popup-overlay="popupOverlayNew" data-popup-modal="popupModalNew">
+                    Thanh Toán Ngay
+                </button>
+                <button class="open-popup-btn" data-popup-overlay="popupOverlayNew" data-popup-modal="popupModalNew">
+                    Liên Kết Ngay
+                </button>
             </div>
             <!-- the dong popup2 -->
         </div>
@@ -3559,51 +3569,60 @@
     
 </div>
 <!-- 3 buoc -->
-<div class="babuoctrothanhkhach">
-<h1 class="hong">Ba bước trở thành khách hàng MoMo</h1>
-<div class="baochon">
-    <div id="buoc1" class="nenhong">Tải và đăng kí</div>
-    <div id="buoc2" class="nenhong">Liên kết ngân hàng</div>
-    <div id="buoc3" class="nenhong">Nạp tiền vào ví</div>
-</div>
-<div class="babuocthongtin">
-    <div class="anh3buoc">
-        <div class="phone-frame">
-            <div class="screen" id="screen"></div>
-            <div class="home-button"></div>
-            <div class="arrows">
-                <button id="prevBtn" style="margin-right: 195px;">&larr;</button>
-                <button id="nextBtn"> &rarr;</button>
+<div class="guide-container">
+    <h2 class="guide-title">Hướng dẫn chuyển nhận tiền</h2>
+    
+    <!-- Thanh điều hướng các bước -->
+    <div class="guide-nav">
+        <button class="guide-nav-btn guide-nav-btn1  active" onclick="showContainer(0)">Tải Và Đăng Ký</button>
+        <button class="guide-nav-btn guide-nav-btn2 " onclick="showContainer(1)">Liên Kết Ngân Hàng</button>
+        <button class="guide-nav-btn guide-nav-btn4 " onclick="showContainer(2)">Nạp Tiền Vào Ví</button>
+    </div>
+    
+    <!-- Nội dung -->
+    <div class="content-container" id="container-0">
+        <div class="guide-image">
+            <button class="nav-btn prev-btn" onclick="prevStep()"><i class='bx bx-chevron-left'></i></button>
+            <img id="phoneImage" src="img/phone1.png" alt="Hướng dẫn">
+            <button class="nav-btn next-btn" onclick="nextStep()"><i class='bx bx-chevron-right'></i></button>
+        </div>
+        <div class="guide-content">
+            <div class="guide-steps">
+            <ol>
+                <li onclick="showStep(0)">
+                    <div class="step">
+                        <span class="step-number ">1</span>
+                        <p class="step-text">Tải ứng dụng miễn phí bằng cách tìm kiếm từ khóa “momo” trên App Store hoặc Google Play Store.</p>
+                    </div>
+                </li>
+                <li onclick="showStep(1)">
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <p class="step-text">Mở ứng dụng và nhập số điện thoại bạn muốn đăng ký MoMo.</p>
+                    </div>
+                </li>
+                <li onclick="showStep(2)">
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <p class="step-text">Vui lòng kiểm tra và nhập chính xác mã xác thực vào ô "Nhập mã xác thực" rồi nhấn "Tiếp tục".</p>
+                    </div>
+                </li>
+                <li onclick="showStep(3)">
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <p class="step-text">Thiết lập mật khẩu để bảo vệ tài khoản MoMo của bạn gồm 6 chữ số và mật khẩu ở 2 ô phải hoàn toàn giống nhau.</p>
+                    </div>
+                </li>
+                <li onclick="showStep(4)">
+                    <div class="step">
+                        <span class="step-number">5</span>
+                        <p class="step-text">Sau khi tạo mật khẩu đăng nhập thành công, bạn nhập thông tin cá nhân theo yêu cầu và nhấn "Xác nhận" để hoàn tất đăng ký.</p>
+                    </div>
+                </li>
+            </ol>
             </div>
         </div>
-        
     </div>
-    <div class="huongdan">
-        <div id="anhuongdan1" class="anhuongdan ">1 tải ứng dụng</div>
-        <div id="huongdan1" class="huondan">
-            <p>Tải ứng dụng miễn phí bằng cách tìm kiếm từ khóa “momo” trên App Store hoặc Google Play Store.</p>
-        </div>
-        <div id="anhuongdan2" class="anhuongdan">2 Nhập số điện thoại</div>
-        <div id="huongdan2" class="huondan">
-            <p>Mở ứng dụng và nhập số điện thoại bạn muốn đăng ký MoMo.
-            Lưu ý: Số điện thoại đăng kí MoMo phải trùng với số điện thoại đăng kí Internet Banking của ngân hàng bạn muốn liên kết.</p>
-        </div>
-        <div id="anhuongdan3" class="anhuongdan">3 Nhập mã xác thực</div>
-        <div id="huongdan3" class="huondan">
-            <p>Một tin nhắn chứa mã xác thực sẽ gửi trực tiếp đến số điện thoại của bạn.
-            Vui lòng kiểm tra và nhập chính xác mã xác thực vào ô "Nhập mã xác thực" rồi nhấn "Tiếp tục".</p>
-        </div>
-        <div id="anhuongdan4" class="anhuongdan">4 Tạo mật khẩu đăng nhập</div>
-        <div id="huongdan4" class="huondan">
-            <p>Thiết lập mật khẩu để bảo vệ tài khoản MoMo của bạn gồm 6 chữ số và mật khẩu ở 2 ô phải hoàn toàn giống nhau. Sau đó bấm "Xác nhận".</p>
-        </div>
-        <div id="anhuongdan5" class="anhuongdan">5 Nhập thông tin</div>
-        <div id="huongdan5" class="huondan">
-            <p>Sau khi tạo mật khẩu đăng nhập thành công, bạn nhập thông tin cá nhân theo yêu cầu và nhấn "Xác nhận" để hoàn tất đăng ký.</p>
-        </div>
-    </div>
-</div>
-<button style="background-color: #d42a87;color: white ;border: none; padding: 10px; border-radius: 10px;" > Xem ngay</button>
 </div>
 
 
@@ -4416,9 +4435,9 @@
     </div>
     <div class="ketnoi">
         <h5>Kết nối với chúng tôi</h5>
-        <a href="#"><img src="img/facebook.png" alt=""></a>
-        <a href="#"><img src="img/linkedin.png" alt=""></a>
-        <a href="#"><img src="img/youtube (1).png" alt=""></a>
+        <a href="https://www.facebook.com/vimomo"><img src="img/facebook.png" alt=""></a>
+        <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQEqkppIWwVX-QAAAZMMyB7wTxKjFXh4gCztDQoV4ohb5p_fY5TbFjPxRw4CKFKADVSFuq0VRzjI8ZXheL6yu9pdsBOAEkrhXc8Ba1c-dBvb82ub1hs0ocaQUvDR9LAoEhmcLNM=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fmomo-mservice%2F"><img src="img/linkedin.png" alt=""></a>
+        <a href="https://www.youtube.com/channel/UCKHHW-qL2JoZqcSNm1jPlqw"><img src="img/youtube (1).png" alt=""></a>
         <h5>Tải ứng dụng trên điện thoại</h5>
     
         <div class="qr-download-container">

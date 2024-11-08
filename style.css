@@ -1198,7 +1198,7 @@ margin-right: 50px;
 }
 
 .popup-body {
-    padding: 20px; /* Điều chỉnh padding theo ý muốn */
+    padding: 40px; /* Điều chỉnh padding theo ý muốn */
 }
 
 .popup-footer {
@@ -1685,4 +1685,189 @@ margin-right: 50px;
 .image-TD {
     width: 100%;
     align-items: center;
+}
+
+.guide-container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+
+}
+
+.guide-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(212, 42, 135);
+    margin-bottom: 20px;
+}
+
+/* Thanh điều hướng các bước */
+.guide-nav {
+    display: flex;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+.guide-nav-btn {
+    background-color: #f9e3ef;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold; /* In đậm font chữ */
+    color: #474646;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: flex-start; /* Căn nội dung về bên trái */
+    height: 50px;
+}
+.guide-nav-btn1 {
+    min-width: 280px;
+    clip-path: polygon(15% 0, 90% 0, 100% 50%, 90% 100%, 15% 100%, 15% 0);
+    padding-left: 100px; /* Điều chỉnh vị trí bên trái của văn bản */
+}
+
+.guide-nav-btn2 {
+    padding-left: 80px; /* Điều chỉnh vị trí bên trái của văn bản */
+    min-width: 280px;
+    clip-path: polygon(15% 0, 90% 0, 100% 50%, 90% 100%, 15% 100%, 20% 50%);
+}
+.guide-nav-btn3 {
+    min-width: 280px;
+    padding-left: 80px; /* Điều chỉnh vị trí bên trái của văn bản */
+    clip-path: polygon(15% 0, 90% 0, 100% 50%, 90% 100%, 15% 100%, 20% 50%);
+}
+.guide-nav-btn4 {
+    padding-left: 80px; /* Điều chỉnh vị trí bên trái của văn bản */
+    min-width: 280px;
+    clip-path: polygon(15% 0, 90% 0, 90% 50%, 90% 100%, 15% 100%, 20% 50%);
+}
+.guide-nav-btn.active {
+    background-color: rgb(212, 42, 135);
+    color: #fff;
+}
+
+.content-container {
+    display: none; /* Ẩn tất cả các container mặc định */
+}
+
+.content-container.active {
+    display: flex; /* Chỉ hiển thị container có class active */
+}
+/* Nội dung chính */
+.guide-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.guide-image {
+    position: relative;
+    border-radius: 30px;
+    background-color: #333;
+    height: 520px;
+    width: 280px;
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    overflow: hidden; /* Giúp giới hạn ảnh trong khung */
+}
+.guide-image i {
+    color: #fffdfd;
+    font-size: 30px;
+}
+.guide-image img {
+    display: block;
+    margin: auto; /* Căn giữa theo chiều ngang */
+    width: 90%; /* Đảm bảo ảnh chiếm tối đa 90% chiều rộng của .guide-image */
+    height: auto; /* Giữ tỷ lệ của ảnh */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.content-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+/* Phần hướng dẫn từng bước */
+.guide-content ol {
+    list-style-type: none;
+    padding: 0;
+    font-size: 18px;
+}
+
+.guide-content li {
+    cursor: pointer;
+    padding: 10px 0;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.guide-content li:hover {
+    color: #ff4d4f;
+}
+
+/* CSS cho nút mũi tên */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(84, 84, 84, 0.6);
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 10px;
+    z-index: 10;
+}
+
+.prev-btn {
+    left: 15px;
+}
+
+.next-btn {
+    right: 15px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(250 215 230);
+    color: rgb(212, 42, 135);
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.active-step .step-number {
+    background-color: rgb(212, 42, 135); /* Nền khi chọn */
+    color: white; /* Màu chữ khi chọn */
+}
+
+.step-text {
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+    font-weight: bold;
+}
+.active-step-text .step-text {
+    font-size: 16px;
+    color:rgb(212, 42, 135);
+    text-align: left;
+    font-weight: bold;
 }
